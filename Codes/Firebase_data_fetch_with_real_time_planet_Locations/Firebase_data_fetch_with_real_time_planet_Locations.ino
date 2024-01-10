@@ -57,10 +57,10 @@ void fetchDataFromAPI() {
       if (httpCode > 0) {
         if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
           String payload = https.getString();
-          Serial.print(payload);
+          // Serial.print(payload);
           DynamicJsonDocument doc(4096);
           deserializeJson(doc, payload);
-          JsonArray data = doc["Sun"];
+          JsonArray data = doc["data"];
 
           for (JsonObject planet : data) {
             String name = planet["name"];
@@ -78,13 +78,10 @@ void fetchDataFromAPI() {
             bool decNegative = dec["negative"];
 
             planetNames.push_back(name);
-            Serial.print(name);
+            // Serial.print(name);
             raValues.push_back(String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s");
             decValues.push_back(String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"");
-            
-            if (planetNames.size() >= MAX_PLANETS) {
-              break;
-            }
+          
           }
         }
       } else {
@@ -108,7 +105,7 @@ void setup() {
 
 void loop() {
   fetchDataFromAPI();
-  // readFirebaseData();
+  readFirebaseData();
   
   int index = findIndex(planetNames, Planet_needed);
   if (index != -1) {
