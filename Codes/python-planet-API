@@ -1,0 +1,34 @@
+import requests
+import time
+
+Planets = ["Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto"]
+
+def fetch_data():
+    # API endpoint URL
+    url = "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false"
+
+    # Sending a GET request to the API
+    response = requests.get(url)
+
+    # Checking if the request was successful (status code 200)
+    if response.status_code == 200:
+        # Parsing JSON response
+        json_data = response.json()
+
+        for i in range(0, 10):
+            RA = str(json_data['data'][i]['rightAscension']['hours']) + " h" + " " + str(
+                json_data['data'][i]['rightAscension']['minutes']) + " m" + " " + str(
+                json_data['data'][i]['rightAscension']['seconds']) + " s"
+            D = str(json_data['data'][i]['declination']['degrees']) + " deg" + " " + str(
+                json_data['data'][i]['declination']['arcminutes']) + " am" + " " + str(
+                json_data['data'][i]['declination']['arcseconds']) + " as"
+            print(f"{Planets[i]:<10} : RA = {RA:<20} : {D}")
+        print("---------------------------------------------------------")
+    else:
+        print("Failed to fetch data from the API")
+
+
+# Loop with a 3-second interval
+while True:
+    fetch_data()
+    time.sleep(1)  # Sleep for 3 seconds before making the next request
