@@ -27,13 +27,14 @@ int findIndex(const std::vector<String>& array, const String &targetValue) {
   return -1;  
 }
 
+
 void connectToWiFi() {
   WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   Serial.print("Connecting to WiFi ..");
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print('.');
-    delay(1000);
+    delay(100);
   }
   Serial.println();
 }
@@ -49,16 +50,17 @@ void fetchDataFromAPI() {
   if (WiFi.status() == WL_CONNECTED) {
     std::unique_ptr<BearSSL::WiFiClientSecure> client(new BearSSL::WiFiClientSecure);
     client->setInsecure();
-    HTTPClient http_s;
+    HTTPClient https;
     
-    if (http_s.begin(*client, "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false")) {
-      int httpCode = http_s.GET();
+    if (https.begin(*client, "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false")) {
+      int httpCode = https.GET();
       if (httpCode > 0) {
         if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
-          String payload = http_s.getString();
+          String payload = https.getString();
+          Serial.print(payload);
           DynamicJsonDocument doc(4096);
           deserializeJson(doc, payload);
-          JsonArray data = doc["data"];
+          JsonArray data = doc["Sun"];
 
           for (JsonObject planet : data) {
             String name = planet["name"];
@@ -76,6 +78,7 @@ void fetchDataFromAPI() {
             bool decNegative = dec["negative"];
 
             planetNames.push_back(name);
+            Serial.print(name);
             raValues.push_back(String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s");
             decValues.push_back(String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"");
             
@@ -85,11 +88,11 @@ void fetchDataFromAPI() {
           }
         }
       } else {
-        Serial.printf("[http_s] GET... failed, error: %s\n", http_s.errorToString(httpCode).c_str());
+        Serial.printf("[https] GET... failed, error: %s\n", https.errorToString(httpCode).c_str());
       }
-      http_s.end();
+      https.end();
     } else {
-      Serial.printf("[http_s] Unable to connect\n");
+      Serial.printf("[https] Unable to connect\n");
     }
   }
 }
@@ -105,7 +108,7 @@ void setup() {
 
 void loop() {
   fetchDataFromAPI();
-  readFirebaseData();
+  // readFirebaseData();
   
   int index = findIndex(planetNames, Planet_needed);
   if (index != -1) {
