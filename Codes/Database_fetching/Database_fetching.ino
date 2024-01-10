@@ -99,5 +99,5 @@ void loop() {
   }
   Serial.println();
   Serial.println("Waiting 5S before the next round...");
-  delay(5000);
+  delay(1000);
 }
