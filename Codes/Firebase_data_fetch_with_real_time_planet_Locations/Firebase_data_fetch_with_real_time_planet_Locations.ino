@@ -4,6 +4,7 @@
 #include <WiFiClientSecureBearSSL.h>
 #include <ArduinoJson.h>
 #include <ESP8266Firebase.h>
+#include <vector>
 
 const char* ssid = "UNITY";
 const char* password = "basnayake";
@@ -12,17 +13,16 @@ const char* password = "basnayake";
 Firebase firebase(REFERENCE_URL);
 
 const int MAX_PLANETS = 10; 
-String planetNames[MAX_PLANETS];
-String raValues[MAX_PLANETS];
-String decValues[MAX_PLANETS];
-int planetCount = 0;
+std::vector<String> planetNames;
+std::vector<String> raValues;
+std::vector<String> decValues;
+
 String Planet_needed;
 
-int findIndex(const String array[], int arraySize, const String &targetValue) {
-  for (int i = 0; i < arraySize; ++i) {
-    if (array[i] == targetValue) {
-      return i;  
-    }
+int findIndex(const std::vector<String>& array, const String &targetValue) {
+  auto it = std::find(array.begin(), array.end(), targetValue);
+  if (it != array.end()) {
+    return std::distance(array.begin(), it);
   }
   return -1;  
 }
@@ -49,13 +49,13 @@ void fetchDataFromAPI() {
   if (WiFi.status() == WL_CONNECTED) {
     std::unique_ptr<BearSSL::WiFiClientSecure> client(new BearSSL::WiFiClientSecure);
     client->setInsecure();
-    HTTPClient https;
+    HTTPClient http_s;
     
-    if (https.begin(*client, "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false")) {
-      int httpCode = https.GET();
+    if (http_s.begin(*client, "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false")) {
+      int httpCode = http_s.GET();
       if (httpCode > 0) {
         if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
-          String payload = https.getString();
+          String payload = http_s.getString();
           DynamicJsonDocument doc(4096);
           deserializeJson(doc, payload);
           JsonArray data = doc["data"];
@@ -75,22 +75,21 @@ void fetchDataFromAPI() {
             float decArcSeconds = dec["arcseconds"];
             bool decNegative = dec["negative"];
 
-            planetNames[planetCount] = name;
-            raValues[planetCount] = String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s";
-            decValues[planetCount] = String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"";
+            planetNames.push_back(name);
+            raValues.push_back(String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s");
+            decValues.push_back(String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"");
             
-            planetCount++;
-            if (planetCount >= MAX_PLANETS) {
+            if (planetNames.size() >= MAX_PLANETS) {
               break;
             }
           }
         }
       } else {
-        Serial.printf("[HTTPS] GET... failed, error: %s\n", https.errorToString(httpCode).c_str());
+        Serial.printf("[http_s] GET... failed, error: %s\n", http_s.errorToString(httpCode).c_str());
       }
-      https.end();
+      http_s.end();
     } else {
-      Serial.printf("[HTTPS] Unable to connect\n");
+      Serial.printf("[http_s] Unable to connect\n");
     }
   }
 }
@@ -108,9 +107,14 @@ void loop() {
   fetchDataFromAPI();
   readFirebaseData();
   
-  Serial.println(Planet_needed + " : RA: " + String(raValues[findIndex(planetNames, MAX_PLANETS, Planet_needed)]) + " : DEC:" + String(decValues[findIndex(planetNames, MAX_PLANETS, Planet_needed)]));
+  int index = findIndex(planetNames, Planet_needed);
+  if (index != -1) {
+    Serial.println(Planet_needed + " : RA: " + raValues[index] + " : DEC:" + decValues[index]);
+  } else {
+    Serial.println("Planet not found!");
+  }
   Serial.println();
   Serial.println("Waiting 1S before the next round...");
   delay(1000);
-
 }
+
