@@ -11,7 +11,7 @@ LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars
 
 const char* ssid = "UNITY";
 const char* password = "basnayake";
-#define REFERENCE_URL "testsending-data-default-rtdb.firebaseio.com"
+#define REFERENCE_URL "earendeldata-default-rtdb.asia-southeast1.firebasedatabase.app"
 
 Firebase firebase(REFERENCE_URL);
 
@@ -37,6 +37,7 @@ const String planetsWithMoon[numberOfPlanets] = {
 
 String Planet_needed;
 String Star_data;
+String prev_planet;
 
 int findIndex(const String array[], int size, const String &targetValue) {
   for (int i = 0; i < size; i++) {
@@ -201,7 +202,9 @@ void loop() {
     }
 
   } else {
-    readFirebaseStarData();
+    if(Planet_needed != prev_planet){
+      readFirebaseStarData();
+    }
 
     Serial.println(Planet_needed + ": " + Star_data);
     lcd.setCursor(0,1);
@@ -211,9 +214,11 @@ void loop() {
     lcd.setCursor(0,2);
     lcd.print(Star_data.substring(0, 10));
     lcd.setCursor(0,3);
-    lcd.print(Star_data.substring(11));
+    lcd.print(Star_data.substring(11, 24));
     
   }
+
+  prev_planet = Planet_needed;
   
   Serial.println();
   // Serial.println("Waiting 1S before the next round...");
