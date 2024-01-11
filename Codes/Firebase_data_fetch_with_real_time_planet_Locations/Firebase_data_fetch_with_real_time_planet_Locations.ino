@@ -16,9 +16,9 @@ const char* password = "basnayake";
 Firebase firebase(REFERENCE_URL);
 
 const int MAX_PLANETS = 10; 
-std::vector<String> planetNames;
-std::vector<String> raValues;
-std::vector<String> decValues;
+String planetNames[MAX_PLANETS];
+String raValues[MAX_PLANETS];
+String decValues[MAX_PLANETS];
 
 const int numberOfPlanets = 10; // Assuming 10 planets in our solar system
 
@@ -38,12 +38,13 @@ const String planetsWithMoon[numberOfPlanets] = {
 String Planet_needed;
 String Star_data;
 
-int findIndex(const std::vector<String>& array, const String &targetValue) {
-  auto it = std::find(array.begin(), array.end(), targetValue);
-  if (it != array.end()) {
-    return std::distance(array.begin(), it);
+int findIndex(const String array[], int size, const String &targetValue) {
+  for (int i = 0; i < size; i++) {
+    if (array[i] == targetValue) {
+      return i;
+    }
   }
-  return -1;  
+  return -1;
 }
 
 void connectToWiFi() {
@@ -103,10 +104,11 @@ void fetchDataFromAPI() {
         if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
           String payload = https.getString();
           // Serial.print(payload);
-          DynamicJsonDocument doc(4096);
+          DynamicJsonDocument doc(32);
           deserializeJson(doc, payload);
           JsonArray data = doc["data"];
 
+          int i = 0;
           for (JsonObject planet : data) {
             String name = planet["name"];
             JsonObject ra = planet["rightAscension"];
@@ -122,11 +124,15 @@ void fetchDataFromAPI() {
             float decArcSeconds = dec["arcseconds"];
             bool decNegative = dec["negative"];
 
-            planetNames.push_back(name);
-            // Serial.print(name);
-            raValues.push_back(String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s");
-            decValues.push_back(String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"");
+          //   planetNames.push_back(name);
+          // //   // Serial.print(name);
+          //   raValues.push_back(String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s");
+          //   decValues.push_back(String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"");
           
+          planetNames[i] = name;
+          raValues[i] = String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s";
+          decValues[i] = String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"";
+          i++;
           }
         }
       } else {
@@ -134,10 +140,13 @@ void fetchDataFromAPI() {
       }
 
       unsigned long endTime = millis();
+      Serial.print("Free RAM: ");
+      Serial.println(ESP.getFreeHeap());
       Serial.println("HTTP Fetching Time: " + String(endTime - startTime) + " ms");
       lcd.setCursor(10,0);
       lcd.print("H: " + String(endTime - startTime) + "ms");
 
+      // client.release(); // Release the WiFiClientSecure
       https.end();
     } else {
       Serial.printf("[https] Unable to connect\n");
@@ -161,6 +170,7 @@ void setup() {
 
 void loop() {
   readFirebaseVariableData();
+  // Planet_needed = "Moon";
 
   // Check if the desired planet is in the array
   bool planetFound = false;
@@ -175,7 +185,7 @@ void loop() {
   if (planetFound) {
     fetchDataFromAPI();
 
-    int index = findIndex(planetNames, Planet_needed);
+    int index = findIndex(planetNames, MAX_PLANETS, Planet_needed);
     if (index != -1) {
       Serial.println(Planet_needed + " : RA: " + raValues[index] + " : DEC:" + decValues[index]);
       lcd.setCursor(0,1);
