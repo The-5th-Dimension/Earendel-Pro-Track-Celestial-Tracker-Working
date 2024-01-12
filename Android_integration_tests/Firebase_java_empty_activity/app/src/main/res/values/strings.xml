@@ -1,3 +1,381 @@
 <resources>
     <string name="app_name">Firebase_java_test</string>
+
+    <string-array name="celestial">
+        <item>Sun</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+        <item>Moon</item>
+        <item>Sol</item>
+        <item>Alpheratz</item>
+        <item>Caph</item>
+        <item>Algenib</item>
+        <item>Groombridge 34</item>
+        <item>Ankaa</item>
+        <item>Fulu</item>
+        <item>Schedar</item>
+        <item>Diphda</item>
+        <item>96 G Psc</item>
+        <item>Achird</item>
+        <item>Van Maanens Star</item>
+        <item>Castula</item>
+        <item>Cih</item>
+        <item>Wurren</item>
+        <item>Mirach</item>
+        <item>Revati</item>
+        <item>Adhil</item>
+        <item>Ruchbah</item>
+        <item>Alpherg</item>
+        <item>Titawin</item>
+        <item>Achernar</item>
+        <item>Nembus</item>
+        <item>p Eridani</item>
+        <item>Torcular</item>
+        <item>Baten Kaitos</item>
+        <item>Mothallah</item>
+        <item>Mesarthim</item>
+        <item>Segin</item>
+        <item>Sheratan</item>
+        <item>Almach</item>
+        <item>Hamal</item>
+        <item>Mira</item>
+        <item>Polaris</item>
+        <item>268 G Cet</item>
+        <item>Kaffaljidhma</item>
+        <item>Lilii Borea</item>
+        <item>Bharani</item>
+        <item>Miram</item>
+        <item>Angetenar</item>
+        <item>Azha</item>
+        <item>Acamar</item>
+        <item>Menkar</item>
+        <item>Algol</item>
+        <item>Misam</item>
+        <item>Botein</item>
+        <item>Dalim</item>
+        <item>Zibal</item>
+        <item>82 G Eri</item>
+        <item>Mirfak</item>
+        <item>Ran</item>
+        <item>Atik</item>
+        <item>Celaeno</item>
+        <item>Electra</item>
+        <item>Taygeta</item>
+        <item>Maia</item>
+        <item>Asterope</item>
+        <item>Merope</item>
+        <item>Alcyone</item>
+        <item>Atlas</item>
+        <item>Pleione</item>
+        <item>Zaurak</item>
+        <item>Menkib</item>
+        <item>Beid</item>
+        <item>Keid</item>
+        <item>Prima Hyadum</item>
+        <item>Secunda Hyadum</item>
+        <item>Beemim</item>
+        <item>Ain</item>
+        <item>Chamukuy</item>
+        <item>Theemin</item>
+        <item>Aldebaran</item>
+        <item>Sceptrum</item>
+        <item>Tabit</item>
+        <item>Hassaleh</item>
+        <item>Almaaz</item>
+        <item>Saclateni</item>
+        <item>Haedus</item>
+        <item>Cursa</item>
+        <item>Kapteyns Star</item>
+        <item>Rigel</item>
+        <item>Capella</item>
+        <item>Bellatrix</item>
+        <item>Elnath</item>
+        <item>Nihal</item>
+        <item>Mintaka</item>
+        <item>Arneb</item>
+        <item>Meissa</item>
+        <item>Hatysa</item>
+        <item>Alnilam</item>
+        <item>Tianguan</item>
+        <item>Phact</item>
+        <item>Alnitak</item>
+        <item>Saiph</item>
+        <item>Wazn</item>
+        <item>Betelgeuse</item>
+        <item>Menkalinan</item>
+        <item>Mahasim</item>
+        <item>Elkurud</item>
+        <item>Propus</item>
+        <item>Red Rectangle</item>
+        <item>Furud</item>
+        <item>Mirzam</item>
+        <item>Tejat</item>
+        <item>Canopus</item>
+        <item>Ross 614</item>
+        <item>Alhena</item>
+        <item>Mebsuta</item>
+        <item>Sirius</item>
+        <item>Alzirr</item>
+        <item>Adhara</item>
+        <item>Unurgunite</item>
+        <item>Muliphein</item>
+        <item>Mekbuda</item>
+        <item>Wezen</item>
+        <item>Wasat</item>
+        <item>Aludra</item>
+        <item>Gomeisa</item>
+        <item>Luytens Star</item>
+        <item>Castor</item>
+        <item>Jishui</item>
+        <item>Procyon</item>
+        <item>Pollux</item>
+        <item>Azmidi</item>
+        <item>Naos</item>
+        <item>Tureis</item>
+        <item>Tarf</item>
+        <item>Piautos</item>
+        <item>Avior</item>
+        <item>Alsciaukat</item>
+        <item>Muscida</item>
+        <item>Minchir</item>
+        <item>Meleph</item>
+        <item>Asellus Borealis</item>
+        <item>Asellus Australis</item>
+        <item>Alsephina</item>
+        <item>Ashlesha</item>
+        <item>Copernicus</item>
+        <item>Acubens</item>
+        <item>Talitha</item>
+        <item>Ross 687</item>
+        <item>Alkaphrah</item>
+        <item>Suhail</item>
+        <item>Nahn</item>
+        <item>Miaplacidus</item>
+        <item>Aspidiske</item>
+        <item>Markeb</item>
+        <item>Alphard</item>
+        <item>Intercrus</item>
+        <item>Alterf</item>
+        <item>Ukdah</item>
+        <item>Subra</item>
+        <item>Ras Elased Australis</item>
+        <item>Zhang</item>
+        <item>Rasalas</item>
+        <item>Felis</item>
+        <item>Regulus</item>
+        <item>Adhafera</item>
+        <item>Tania Borealis</item>
+        <item>Algieba</item>
+        <item>Tania Australis</item>
+        <item>Praecipua</item>
+        <item>Chalawan</item>
+        <item>Alkes</item>
+        <item>Merak</item>
+        <item>Lalande 21185</item>
+        <item>Dubhe</item>
+        <item>Zosma</item>
+        <item>Chertan</item>
+        <item>Alula Borealis</item>
+        <item>Giausar</item>
+        <item>Taiyangshou</item>
+        <item>Ross 128</item>
+        <item>Denebola</item>
+        <item>Zavijava</item>
+        <item>Groombridge 1830</item>
+        <item>Phecda</item>
+        <item>Tonatiuh</item>
+        <item>Alchiba</item>
+        <item>Imai</item>
+        <item>Megrez</item>
+        <item>Gienah</item>
+        <item>Zaniah</item>
+        <item>Ginan</item>
+        <item>Acrux</item>
+        <item>3C 273</item>
+        <item>Algorab</item>
+        <item>Gacrux</item>
+        <item>Chara</item>
+        <item>Kraz</item>
+        <item>Porrima</item>
+        <item>La Superba</item>
+        <item>Tianyi</item>
+        <item>Mimosa</item>
+        <item>Alioth</item>
+        <item>Taiyi</item>
+        <item>Minelauva</item>
+        <item>Cor Caroli</item>
+        <item>Vindemiatrix</item>
+        <item>Diadem</item>
+        <item>Mizar</item>
+        <item>Spica</item>
+        <item>Alcor</item>
+        <item>Heze</item>
+        <item>Alkaid</item>
+        <item>Muphrid</item>
+        <item>Hadar</item>
+        <item>Thuban</item>
+        <item>Menkent</item>
+        <item>Kang</item>
+        <item>Arcturus</item>
+        <item>Syrma</item>
+        <item>Xuange</item>
+        <item>Khambalia</item>
+        <item>Elgafar</item>
+        <item>Proxima Centauri</item>
+        <item>Seginus</item>
+        <item>Toliman</item>
+        <item>Rigil Kentaurus</item>
+        <item>Izar</item>
+        <item>Merga</item>
+        <item>Kochab</item>
+        <item>Zubenelgenubi</item>
+        <item>Nekkar</item>
+        <item>Brachium</item>
+        <item>Zubeneschamali</item>
+        <item>Pherkad</item>
+        <item>Alkalurops</item>
+        <item>Edasich</item>
+        <item>Nusakan</item>
+        <item>Alphecca</item>
+        <item>Zubenelhakrabi</item>
+        <item>Unukalhai</item>
+        <item>Gudja</item>
+        <item>Iklil</item>
+        <item>Fang</item>
+        <item>Dschubba</item>
+        <item>Acrab</item>
+        <item>Marsic</item>
+        <item>Jabbah</item>
+        <item>Yed Prior</item>
+        <item>Yed Posterior</item>
+        <item>Alniyat</item>
+        <item>Athebyne</item>
+        <item>Cujam</item>
+        <item>Antares</item>
+        <item>Kornephoros</item>
+        <item>Wolf 1061</item>
+        <item>Ogma</item>
+        <item>Marfik</item>
+        <item>Paikauhale</item>
+        <item>Atria</item>
+        <item>Larawag</item>
+        <item>Xamidimura</item>
+        <item>Pipirima</item>
+        <item>Aldhibah</item>
+        <item>Sabik</item>
+        <item>Rasalgethi</item>
+        <item>Sarin</item>
+        <item>Guniibuu</item>
+        <item>Rastaban</item>
+        <item>Maasym</item>
+        <item>Lesath</item>
+        <item>Yildun</item>
+        <item>Shaula</item>
+        <item>Rasalhague</item>
+        <item>Sargas</item>
+        <item>Dziban</item>
+        <item>Cebalrai</item>
+        <item>Alruba</item>
+        <item>Cervantes</item>
+        <item>Fuyue</item>
+        <item>Grumium</item>
+        <item>Eltanin</item>
+        <item>Barnards Star</item>
+        <item>Alnasl</item>
+        <item>Polis</item>
+        <item>Kaus Media</item>
+        <item>Kaus Australis</item>
+        <item>Fafnir</item>
+        <item>Kaus Borealis</item>
+        <item>Vega</item>
+        <item>Struve 2398 A</item>
+        <item>Struve 2398 B</item>
+        <item>Ross 154</item>
+        <item>Sheliak</item>
+        <item>Ainalrami</item>
+        <item>Nunki</item>
+        <item>Alya</item>
+        <item>Sulafat</item>
+        <item>Ascella</item>
+        <item>Okab</item>
+        <item>Meridiana</item>
+        <item>Albaldah</item>
+        <item>Altais</item>
+        <item>Aladfar</item>
+        <item>Arkab Prior</item>
+        <item>Arkab Posterior</item>
+        <item>Rukbat</item>
+        <item>Anser</item>
+        <item>Albireo</item>
+        <item>Alsafi</item>
+        <item>Campbells Hydrogen Star</item>
+        <item>Sham</item>
+        <item>Fawaris</item>
+        <item>Tarazed</item>
+        <item>Altair</item>
+        <item>Libertas</item>
+        <item>Alshain</item>
+        <item>Terebellum</item>
+        <item>Cygnus X1</item>
+        <item>Algedi</item>
+        <item>Alshat</item>
+        <item>Dabih</item>
+        <item>Sadr</item>
+        <item>Peacock</item>
+        <item>Aldulfin</item>
+        <item>Rotanev</item>
+        <item>Sualocin</item>
+        <item>Deneb</item>
+        <item>Aljanah</item>
+        <item>Albali</item>
+        <item>Musica</item>
+        <item>Polaris Australis</item>
+        <item>Kitalpha</item>
+        <item>Lacaille 8760</item>
+        <item>Alderamin</item>
+        <item>Alfirk</item>
+        <item>Sadalsuud</item>
+        <item>Bunda</item>
+        <item>Nashira</item>
+        <item>Azelfafage</item>
+        <item>Enif</item>
+        <item>Deneb Algedi</item>
+        <item>Aldhanab</item>
+        <item>Kurhah</item>
+        <item>Sadalmelik</item>
+        <item>Alnair</item>
+        <item>Biham</item>
+        <item>Ancha</item>
+        <item>Sadachbia</item>
+        <item>Kruger 60</item>
+        <item>Situla</item>
+        <item>Homam</item>
+        <item>Tiaki</item>
+        <item>Matar</item>
+        <item>Babcocks star</item>
+        <item>Sadalbari</item>
+        <item>Skat</item>
+        <item>Helvetios</item>
+        <item>Fomalhaut</item>
+        <item>Scheat</item>
+        <item>Fumalsamakah</item>
+        <item>Markab</item>
+        <item>Lacaille 9352</item>
+        <item>Salm</item>
+        <item>Alkarab</item>
+        <item>Veritate</item>
+        <item>Errai</item>
+        <item>Ross 686</item>
+        <item>Wolf 359</item>
+        <item>Alula Australis</item>
+        <item>Graffias</item>
+        <item>Alrakis</item>
+        <item>EZ Aqr</item>
+        <item>Ross 248</item>
+    </string-array>
 </resources>
