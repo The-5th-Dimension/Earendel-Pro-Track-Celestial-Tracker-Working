@@ -31,12 +31,6 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        String[] celestial = getResources().getStringArray(R.array.celestial);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.dropdown_item,celestial);
-        binding.autoCompleteTextView.setAdapter(arrayAdapter);
-
-
-
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,5 +54,14 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Handle onResume functionality here if needed
+        String[] celestial = getResources().getStringArray(R.array.celestial);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.dropdown_item,celestial);
+        binding.autoCompleteTextView.setAdapter(arrayAdapter);
     }
 }
