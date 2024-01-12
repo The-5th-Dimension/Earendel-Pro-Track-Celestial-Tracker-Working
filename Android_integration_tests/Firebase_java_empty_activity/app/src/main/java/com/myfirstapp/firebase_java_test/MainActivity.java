@@ -7,9 +7,12 @@ import static java.security.AccessController.getContext;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -25,11 +28,26 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference reference;
 
+    // Assuming your button has an ID named "buttonSwitchPage"
+//    Button buttonSwitchPage = findViewById(R.id.login);
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+
+        Intent intent = getIntent();
+        if (intent != null) {
+            String username = intent.getStringExtra("USERNAME");
+            if (username != null) {
+                // Assuming you have a TextView with the id greetingTextView
+                TextView greetingTextView = findViewById(R.id.greetingTextView);
+                greetingTextView.setText("Hello, " + username);
+            }
+        }
 
         binding.button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
     }
 
     @Override
