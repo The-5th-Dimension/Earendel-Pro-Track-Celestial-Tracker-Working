@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase db;
     DatabaseReference reference;
 
+    Switch switchPlanetsOnly;
+
     // Assuming your button has an ID named "buttonSwitchPage"
 //    Button buttonSwitchPage = findViewById(R.id.login);
 
@@ -38,6 +42,14 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        switchPlanetsOnly = findViewById(R.id.planets_only);
+
+        switchPlanetsOnly.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                updateAutoCompleteList(isChecked);
+            }
+        });
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -80,7 +92,20 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         // Handle onResume functionality here if needed
         String[] celestial = getResources().getStringArray(R.array.celestial);
+        String[] planets_only = getResources().getStringArray(R.array.planets_only);
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.dropdown_item,celestial);
+        binding.autoCompleteTextView.setAdapter(arrayAdapter);
+    }
+
+    private void updateAutoCompleteList(boolean planetsOnly) {
+        String[] celestialArray;
+        if (planetsOnly) {
+            celestialArray = getResources().getStringArray(R.array.planets_only);
+        } else {
+            celestialArray = getResources().getStringArray(R.array.celestial);
+        }
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, R.layout.dropdown_item, celestialArray);
         binding.autoCompleteTextView.setAdapter(arrayAdapter);
     }
 }
