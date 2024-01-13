@@ -7,6 +7,10 @@
 #include <vector>
 #include <LiquidCrystal_I2C.h>
 
+#include <Servo.h>
+
+Servo Zaxis;
+
 LiquidCrystal_I2C lcd(0x27,20,4);  // set the LCD address to 0x27 for a 16 chars and 2 line display
 
 const char* ssid = "UNITY";
@@ -157,6 +161,8 @@ void fetchDataFromAPI() {
 
 void setup() {
 
+  Zaxis.attach(D3);
+
   lcd.init();                      // initialize the lcd 
   // Print a message to the LCD.
   lcd.backlight();
@@ -188,7 +194,9 @@ void loop() {
 
     int index = findIndex(planetNames, MAX_PLANETS, Planet_needed);
     if (index != -1) {
+      int degreeIndex = raValues[index].indexOf('h');
       Serial.println(Planet_needed + " : RA: " + raValues[index] + " : DEC:" + decValues[index]);
+      Zaxis.write( atoi(raValues[index].substring(0, degreeIndex).c_str())*9 );
       lcd.setCursor(0,1);
       lcd.print("              ");
       lcd.setCursor(0,1);
