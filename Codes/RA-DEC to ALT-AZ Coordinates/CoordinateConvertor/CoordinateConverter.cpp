@@ -1,17 +1,27 @@
 #include <cmath>
 #include <vector>
 
-#include "CoordinateConvertor.h"
+#include "CoordinateConverter.h"
 
 using namespace std;
 
-void CoordinateConverter::addLocation(double lat, double longi)
+CoordinateConverter::CoordinateConverter()
+{
+}
+
+CoordinateConverter::CoordinateConverter(double lat, double longi)
 {
     latitude = lat;
     longitude = longi;
 }
 
-void CoordinateConverter::updateDate(int d, int m, int y)
+void CoordinateConverter::updateLocation(double lat, double longi)
+{
+    latitude = lat;
+    longitude = longi;
+}
+
+void CoordinateConverter::updateDateUTC(int d, int m, int y)
 {
     day = d;
     month = m;
@@ -153,5 +163,17 @@ vector<double> CoordinateConverter::RADEC_to_ALTAZ()
 
 vector<double> CoordinateConverter::convert()
 {
+    return RADEC_to_ALTAZ();
+}
+
+vector<double> CoordinateConverter::convert(double right_ascension, double declination)
+{
+    update_RA_DEC(right_ascension, declination);
+    return RADEC_to_ALTAZ();
+}
+
+vector<double> CoordinateConverter::convert(int ra_h, int ra_min, float ra_sec, bool ra_neg, int dec_deg, int dec_arcmin, float dec_arcsec, bool dec_neg)
+{
+    update_RA_DEC(ra_h, ra_min, ra_sec, ra_neg, dec_deg, dec_arcmin, dec_arcsec, dec_neg);
     return RADEC_to_ALTAZ();
 }
