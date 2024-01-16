@@ -26,10 +26,14 @@ private:
     vector<double> RADEC_to_ALTAZ();
 
 public:
-    void addLocation(double lat, double longi);
-    void updateDate(int d, int m, int y);
+    CoordinateConverter();
+    CoordinateConverter(double lat, double longi);
+    void updateLocation(double lat, double longi);
+    void updateDateUTC(int d, int m, int y);
     void updateTimeUTC(int h, int min, double sec);
     void update_RA_DEC(double right_ascension, double declination);
     void update_RA_DEC(int ra_h, int ra_min, float ra_sec, bool ra_neg, int dec_deg, int dec_arcmin, float dec_arcsec, bool dec_neg);
     vector<double> convert();
+    vector<double> convert(double right_ascension, double declination);
+    vector<double> convert(int ra_h, int ra_min, float ra_sec, bool ra_neg, int dec_deg, int dec_arcmin, float dec_arcsec, bool dec_neg);
 };
