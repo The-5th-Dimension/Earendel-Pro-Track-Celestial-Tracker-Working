@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Earendel</string>
+    <string name="planet">Planet</string>
+    <string name="star">Star</string>
+</resources>
