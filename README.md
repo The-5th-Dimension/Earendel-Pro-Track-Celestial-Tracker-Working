@@ -1,6 +1,9 @@
 <h1>Earendel Pro-Track: IoT-Enabled Celestial Tracker</h1>
     <p>Welcome to the Earendel Pro-Track project repository!</p>
-    
+
+  <h2>Project Video</h2>  
+  <p>Please find the project video <a href="Project Progress Video Submission/Earendel_Pro_Track _The_5th_Dimension.mp4">here</a> to get an idea about our project.</p>
+  
   <h2>Overview</h2>
   <p>
       This project aims to create an Equatorial telescope mount capable of tracking and targeting celestial bodies. The system is equipped with IoT capabilities, enabling communication with an Android app for precise control and orientation adjustments.
