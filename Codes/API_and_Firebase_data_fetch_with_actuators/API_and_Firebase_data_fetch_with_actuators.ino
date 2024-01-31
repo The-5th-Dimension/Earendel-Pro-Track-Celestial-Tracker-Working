@@ -12,6 +12,7 @@ const char* ssid = "Yasiru's Galaxy Tab";
 const char* password = "unlimited";
 const char* referenceUrl = "earendeldata-default-rtdb.asia-southeast1.firebasedatabase.app";
 const char* httpUrl = "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false";
+const char* FirebaseUrl = "https://earendeldata-default-rtdb.asia-southeast1.firebasedatabase.app/";
 
 #define az "Z"
 #define alt "Y"
@@ -25,6 +26,7 @@ const char* httpUrl = "https://api.visibleplanets.dev/v3?latitude=7.4818&longitu
 FirebaseManager firebase(referenceUrl);
 WiFiManager wifiManager(ssid, password, lcd);
 HTTPManager httpManager;
+FirebaseManagerNew httpManager;
 
 const int MAX_PLANETS = 10;
 const int numberOfPlanets = 10;
@@ -167,6 +169,13 @@ void handleStarData() {
   if (planetNeeded != prevPlanet) {
     starData = firebase.getString(planetNeeded);
   }
+
+  az_to_turn = int(atoi(starData.substring(3, 10).c_str())/1.8) * 7 * 1.8 * 2;
+
+  alt_to_turn = -abs(int(atoi(starData.substring(15, 24).c_str())/1.8))  * 1.8;
+
+  if(az_to_turn >= 360){az_to_turn -= 360;}
+
 
   Serial.println(planetNeeded + ": " + starData);
   lcd.setCursor(0, 1);
