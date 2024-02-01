@@ -119,14 +119,14 @@ void loop() {
       }
     }
 
-    // zAxisServo.write(az_current_angle);
-    // Serial.print(alt_to_turn);
-    // Serial.print(" : ");
-    // Serial.print(alt_current_angle);
-    // Serial.print(" : ");
-    // Serial.print(az_to_turn);
-    // Serial.print(" : ");
-    // Serial.println(az_current_angle);
+    zAxisServo.write(az_current_angle);
+    Serial.print(alt_to_turn);
+    Serial.print(" : ");
+    Serial.print(alt_current_angle);
+    Serial.print(" : ");
+    Serial.print(az_to_turn);
+    Serial.print(" : ");
+    Serial.println(az_current_angle);
 
 }
 
@@ -142,7 +142,7 @@ void handlePlanetData() {
 
   Serial.println("Planet: " + planetNeeded);
 
-  if (index != -1) {
+  if (true) {
     int degreeIndex = raValues[index].indexOf('h');
     int altdegreeIndex = decValues[index].indexOf("°");
     Serial.print(decValues[index]);
