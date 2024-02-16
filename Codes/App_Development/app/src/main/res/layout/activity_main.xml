@@ -10,12 +10,13 @@
 
     <Button
         android:id="@+id/btnStar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="131dp"
+        android:layout_height="74dp"
+        android:background="@drawable/btn_bg"
         android:text="@string/star"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,15 +25,17 @@
 
     <Button
         android:id="@+id/btnPlanet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="162dp"
+        android:layout_height="74dp"
+        android:background="@drawable/btn_bg"
         android:text="@string/planet"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStar"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.136" />
 </androidx.constraintlayout.widget.ConstraintLayout>
