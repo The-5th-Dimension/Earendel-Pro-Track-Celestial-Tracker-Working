@@ -1,0 +1,9 @@
+Add Component: Footprint Not Found XTAL_ECS-160-S-1X
+Added Pin To Net: NetName=NetC1_2 Pin=C2-2
+Added Pin To Net: NetName=NetC1_2 Pin=C3-2
+Add Pin To Net: Unknown Pin: Pin Y1-1
+Add Pin To Net: Unknown Pin: Pin Y1-2
+Change Net Name : Old Net Name=NetC1_2 New Net Name=GND
+Added Member To Class: ClassName=synchronous Member=Component C2 02013A220JAT2A
+Added Member To Class: ClassName=Power Member=Component J? 213083-0005
+Add Class Member: Failed to add class member : Component Y1 ECS-160-S-1X
