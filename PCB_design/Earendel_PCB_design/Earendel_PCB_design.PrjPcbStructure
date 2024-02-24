@@ -1,4 +1,4 @@
-Record=TopLevelDocument|FileName=asynchronous.SchDoc|SheetNumber=2
-Record=NoMainPathDocument|SourceDocument=asynchronous.SchDoc|FileName=Power.SchDoc|SheetNumber=4
-Record=NoMainPathDocument|SourceDocument=asynchronous.SchDoc|FileName=synchronous.SchDoc|SheetNumber=1
-Record=NoMainPathDocument|SourceDocument=asynchronous.SchDoc|FileName=Top_domain.SchDoc|SheetNumber=3
+Record=TopLevelDocument|FileName=Top_domain.SchDoc|SheetNumber=1
+Record=SheetSymbol|SourceDocument=Top_domain.SchDoc|Designator=Asynchronous|SchDesignator=Asynchronous|FileName=asynchronous.SchDoc|SheetNumber=3|SymbolType=Normal|RawFileName=asynchronous.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top_domain.SchDoc|Designator=Power|SchDesignator=Power|FileName=Power.SchDoc|SheetNumber=4|SymbolType=Normal|RawFileName=Power.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Top_domain.SchDoc|Designator=Synchronous|SchDesignator=Synchronous|FileName=synchronous.SchDoc|SheetNumber=2|SymbolType=Normal|RawFileName=synchronous.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
