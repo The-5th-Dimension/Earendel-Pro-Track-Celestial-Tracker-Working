@@ -1,0 +1,119 @@
+Removed Pin From Net: NetName=3V3 Pin=J?-1
+Removed Pin From Net: NetName=GND Pin=J?-3
+Removed Member From Class: ClassName=Asynchronous Member=C?
+Removed Member From Class: ClassName=Synchronous Member=C?
+Removed Member From Class: ClassName=Asynchronous Member=J?
+Removed Member From Class: ClassName=Power Member=J?
+Removed Member From Class: ClassName=Sensors Member=J?
+Removed Member From Class: ClassName=Asynchronous Member=R?
+Removed Member From Class: ClassName=Synchronous Member=R?
+Removed Member From Class: ClassName=Power Member=SW?
+Removed Member From Class: ClassName=Asynchronous Member=U?
+Removed Member From Class: ClassName=Power Member=U?
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C5
+Change Component Designator: OldDesignator=C? NewDesignator=C6
+Change Component Designator: OldDesignator=C? NewDesignator=C7
+Change Component Designator: OldDesignator=C? NewDesignator=C8
+Change Component Designator: OldDesignator=C? NewDesignator=C9
+Change Component Designator: OldDesignator=C? NewDesignator=C10
+Change Component Designator: OldDesignator=C?A NewDesignator=C11A
+Change Component Designator: OldDesignator=C?B NewDesignator=C11B
+Change Component Designator: OldDesignator=J? NewDesignator=J1
+Change Component Designator: OldDesignator=J? NewDesignator=J2
+Change Component Designator: OldDesignator=J? NewDesignator=J3
+Change Component Designator: OldDesignator=J? NewDesignator=J4
+Change Component Designator: OldDesignator=J?A NewDesignator=J5A
+Change Component Designator: OldDesignator=J?B NewDesignator=J5B
+Change Component Designator: OldDesignator=P? NewDesignator=P1
+Change Component Designator: OldDesignator=P?A NewDesignator=P2A
+Change Component Designator: OldDesignator=P?A NewDesignator=P3A
+Change Component Designator: OldDesignator=P?B NewDesignator=P2B
+Change Component Designator: OldDesignator=P?B NewDesignator=P3B
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R2
+Change Component Designator: OldDesignator=R? NewDesignator=R3
+Change Component Designator: OldDesignator=R? NewDesignator=R4
+Change Component Designator: OldDesignator=R? NewDesignator=R5
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=SW? NewDesignator=SW1
+Change Component Designator: OldDesignator=SW? NewDesignator=SW2
+Change Component Designator: OldDesignator=SW?A NewDesignator=SW3A
+Change Component Designator: OldDesignator=SW?B NewDesignator=SW3B
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Change Component Designator: OldDesignator=U? NewDesignator=U3
+Change Component Designator: OldDesignator=U? NewDesignator=U4
+Change Component Designator: OldDesignator=Y? NewDesignator=Y1
+Added Pin To Net: NetName=3V3 Pin=J1-1
+Added Pin To Net: NetName=GND Pin=J1-3
+Change Net Name : Old Net Name=NetC?_1 New Net Name=NetC4_1
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC3_2
+Change Net Name : Old Net Name=NetJ?_3 New Net Name=NetJ4_3
+Change Net Name : Old Net Name=NetJ?_4 New Net Name=NetJ4_4
+Change Net Name : Old Net Name=NetJ?A_1 New Net Name=NetJ5A_1
+Change Net Name : Old Net Name=NetJ?A_2 New Net Name=NetJ5A_2
+Change Net Name : Old Net Name=NetJ?A_3 New Net Name=NetJ5A_3
+Change Net Name : Old Net Name=NetJ?A_4 New Net Name=NetJ5A_4
+Change Net Name : Old Net Name=NetJ?B_1 New Net Name=NetJ5B_1
+Change Net Name : Old Net Name=NetJ?B_2 New Net Name=NetJ5B_2
+Change Net Name : Old Net Name=NetJ?B_3 New Net Name=NetJ5B_3
+Change Net Name : Old Net Name=NetJ?B_4 New Net Name=NetJ5B_4
+Change Net Name : Old Net Name=NetP?_2 New Net Name=NetP1_2
+Change Net Name : Old Net Name=NetP?_3 New Net Name=NetP1_3
+Change Net Name : Old Net Name=NetP?A_2 New Net Name=NetP2A_2
+Change Net Name : Old Net Name=NetP?A_3 New Net Name=NetP2A_3
+Change Net Name : Old Net Name=NetP?A_4 New Net Name=NetP2A_4
+Change Net Name : Old Net Name=NetP?A_5 New Net Name=NetP2A_5
+Change Net Name : Old Net Name=NetP?A_7 New Net Name=NetP2A_7
+Change Net Name : Old Net Name=NetP?A_8 New Net Name=NetP2A_8
+Change Net Name : Old Net Name=NetP?B_2 New Net Name=NetP2B_2
+Change Net Name : Old Net Name=NetP?B_3 New Net Name=NetP2B_3
+Change Net Name : Old Net Name=NetP?B_4 New Net Name=NetP2B_4
+Change Net Name : Old Net Name=NetP?B_5 New Net Name=NetP2B_5
+Change Net Name : Old Net Name=NetP?B_7 New Net Name=NetP2B_7
+Change Net Name : Old Net Name=NetP?B_8 New Net Name=NetP2B_8
+Change Net Name : Old Net Name=NetR?_1 New Net Name=NetR5_1
+Change Net Name : Old Net Name=NetR?_2 New Net Name=NetR5_2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=U1-20
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetC5_1 Pin=C5-1
+Added Pin To Net: NetName=NetC5_1 Pin=U1-9
+Added Pin To Net: NetName=NetC5_1 Pin=Y1-2
+Added Net: Name=NetC5_1
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=NetC8_2 Pin=R2-1
+Added Pin To Net: NetName=NetC8_2 Pin=U2-3
+Added Net: Name=NetC8_2
+Added Pin To Net: NetName=NetR3_1 Pin=R3-1
+Added Pin To Net: NetName=NetR3_1 Pin=R4-1
+Added Pin To Net: NetName=NetR3_1 Pin=U3-1
+Added Net: Name=NetR3_1
+Added Member To Class: ClassName=Synchronous Member=Component C1 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C2 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C3 08055F104KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C4 C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C5 C0805C220K3GACTU
+Added Member To Class: ClassName=Asynchronous Member=Component C6 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C7 08055F104KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C8 C0805C105K4PACTU
+Added Member To Class: ClassName=Power Member=Component C9 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component J1 PEC02DABN
+Added Member To Class: ClassName=Power Member=Component J2 213083-0005
+Added Member To Class: ClassName=Power Member=Component J3 694106301002
+Added Member To Class: ClassName=Sensors Member=Component J4 B4B-XH-A(LF)(SN)
+Added Member To Class: ClassName=Stepper_Alt Member=Component P3A (P3) 61300811121
+Added Member To Class: ClassName=Stepper_AZ Member=Component P3B (P3) 61300811121
+Added Member To Class: ClassName=Synchronous Member=Component R1 RC0805FR-071KL
+Added Member To Class: ClassName=Asynchronous Member=Component R2 RC0805FR-0710KL
+Added Member To Class: ClassName=Power Member=Component R3 RC0805FR-071KL
+Added Member To Class: ClassName=Power Member=Component R4 RC0805FR-071KL
+Added Member To Class: ClassName=Power Member=Component R5 RC0805FR-071KL
+Added Member To Class: ClassName=Power Member=Component SW2 A6T-2104
+Added Member To Class: ClassName=Asynchronous Member=Component U2 ESP32-WROOM-32
+Added Member To Class: ClassName=Power Member=Component U3 AMS1117-5.0
+Added Member To Class: ClassName=Power Member=Component U4 AMS1117-3.3

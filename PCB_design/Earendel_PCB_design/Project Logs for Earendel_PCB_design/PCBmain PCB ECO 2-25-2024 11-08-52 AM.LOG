@@ -1,0 +1,27 @@
+Added Pin To Net: NetName=+5 Pin=SW?_Stepper_Alt-4
+Added Pin To Net: NetName=+5 Pin=SW?_Stepper_AZ-4
+Added Pin To Net: NetName=EN_Stepper_Alt Pin=P?_Stepper_Alt-1
+Added Pin To Net: NetName=EN_Stepper_Alt Pin=SW?_Stepper_Alt-5
+Added Net: Name=EN_Stepper_Alt
+Added Pin To Net: NetName=EN_Stepper_AZ Pin=P?_Stepper_AZ-1
+Added Pin To Net: NetName=EN_Stepper_AZ Pin=SW?_Stepper_AZ-5
+Added Net: Name=EN_Stepper_AZ
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetR?_1" already exists
+Added Member To Class: ClassName=Asynchronous Member=Component C? 08055F104KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C? C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C? C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component J? PEC02DABN
+Added Member To Class: ClassName=Power Member=Component J? 213083-0005
+Added Member To Class: ClassName=Stepper_Alt Member=Component P?_Stepper_Alt (P?) 61300811121
+Added Member To Class: ClassName=Stepper_AZ Member=Component P?_Stepper_AZ (P?) 61300811121
+Added Member To Class: ClassName=Stepper_Alt Member=Component R?_Stepper_Alt (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Stepper_Alt Member=Component R?_Stepper_Alt (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Stepper_AZ Member=Component R?_Stepper_AZ (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Stepper_AZ Member=Component R?_Stepper_AZ (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Power Member=Component R? RC0805FR-071KL
