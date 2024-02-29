@@ -1,5 +1,3 @@
-#include <Arduino.h>
-
 /*
 
 PROJECT PLAN
@@ -13,14 +11,34 @@ PROJECT PLAN
 
 */
 
-// put function declarations here:
+#include <Arduino.h>
+#include "CoordinateConverter.h"
 
-void setup() {
-  // put your setup code here, to run once:
+#define SerialINT 2
+
+// Variables to be updated based on the Serial data from the ESP32.
+volatile int year = 2000, month = 1, day = 1, hour = 12, minute = 0;
+volatile double second = 0;
+volatile double latitude = 0, longitude = 0;
+double ra = 0, dec = 0;
+
+// Local coordinate values.
+double altitude = 0, azimuth = 0;
+
+void handleSerial();
+
+void setup()
+{
+  pinMode(SerialINT, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(SerialINT), handleSerial, RISING);
 }
 
-void loop() {
+void loop()
+{
   // put your main code here, to run repeatedly:
 }
 
-// put function definitions here:
+void handleSerial()
+{
+  // The function definition depends on how the ESP32 encodds data.
+}
