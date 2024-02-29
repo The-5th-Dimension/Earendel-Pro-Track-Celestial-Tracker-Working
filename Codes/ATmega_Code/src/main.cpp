@@ -12,6 +12,7 @@ PROJECT PLAN
 */
 
 #include <Arduino.h>
+#include <StandardCplusplus.h>
 #include "CoordinateConverter.h"
 
 #define SerialINT 2
