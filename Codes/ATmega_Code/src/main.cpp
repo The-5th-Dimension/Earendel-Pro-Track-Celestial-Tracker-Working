@@ -13,6 +13,7 @@ PROJECT PLAN
 
 #include <Arduino.h>
 #include <StandardCplusplus.h>
+#include <vector>
 #include "CoordinateConverter.h"
 
 #define Serial_INT 2
@@ -22,15 +23,21 @@ volatile int year = 2000, month = 1, day = 1, hour = 12, minute = 0;
 volatile double second = 0;
 volatile double latitude = 0, longitude = 0;
 double ra = 0, dec = 0;
+bool valuesUpdated = true;
 
 // Local coordinate values.
 double altitude = 0, azimuth = 0;
 
+CoordinateConverter converter;
+
+// Function Declarations
 void handleSerial();
 void autoUpdateTime();
 
 void setup()
 {
+  // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
+
   pinMode(Serial_INT, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
 
@@ -39,18 +46,40 @@ void setup()
 
 void loop()
 {
-  // put your main code here, to run repeatedly:
+  if (valuesUpdated)
+  {
+    converter.updateLocation(latitude, longitude);
+    converter.updateDateUTC(day, month, year);
+    converter.updateTimeUTC(hour, minute, second);
+    converter.update_RA_DEC(ra, dec);
+    valuesUpdated = false;
+  }
+
+  converter.updateTimeUTC(hour, minute, second);
+  converter.updateDateUTC(day, month, year); // Only necessary on a moment after midnight.
+
+  vector<double> altaz = converter.convert();
+  altitude = altaz[0];
+  azimuth = altaz[1];
+
+  // == TODO ==
+  // Now, turn bottom stepper to `azimuth`, and top stepper to `altitude`.
+  // Need to consider about how to accurately map the motor angles with the physical world angles.
+  // Accelerometer and Magnetometer comes into play here.
 }
 
+// Function Definitions
 void handleSerial()
 {
-  // The function definition depends on how the ESP32 encodds data.
+  // The function definition depends on how the ESP32 encodes data.
+
+  // Set `valuesUpdated` to true after any change.
 }
 
 void autoUpdateTime()
 {
   // The following are internal registers in ATmega328.
-  // Internal interrupts are used to precissely keep track of time.
+  // Internal interrupts (Timers) are used to keep track of time precisely.
   TCCR1A = 0;
   TCCR1B = 0;
   TCNT1 = 3036;
@@ -77,7 +106,7 @@ ISR(TIMER1_OVF_vect)
     day += 1;
   }
   // This should be extended to work well with month and year boundaries.
-  // e.g.: Update from 31st March to 1st April.
+  // e.g.: Update from 30th June to 1st of July.
   // However, let's assume this is enough for demonstration.
 
   // Setting back to 3036, otherwise it starts back from 0.
