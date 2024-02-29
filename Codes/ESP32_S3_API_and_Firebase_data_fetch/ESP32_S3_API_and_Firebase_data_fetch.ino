@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "WiFiManager.h"
 #include "FirebaseManager.h"
-// #include "HTTPManager.h"
+#include "HTTPManager.h"
 #include "LCDManager.h"
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
@@ -91,6 +91,8 @@ void setup() {
 void loop() {
   if (millis()/1000 - now_time >= 10){
     planetNeeded = firebase.getString("Planet");
+
+    Serial.println(planetNeeded);
     
     bool planetFound = findIndex(planetsWithMoon, numberOfPlanets, planetNeeded) != -1;
     
@@ -130,13 +132,13 @@ void loop() {
     }
 
     // zAxisServo.write(az_current_angle);
-    Serial.print(alt_to_turn);
-    Serial.print(" : ");
-    Serial.print(alt_current_angle);
-    Serial.print(" : ");
-    Serial.print(az_to_turn);
-    Serial.print(" : ");
-    Serial.println(az_current_angle);
+    // Serial.print(alt_to_turn);
+    // Serial.print(" : ");
+    // Serial.print(alt_current_angle);
+    // Serial.print(" : ");
+    // Serial.print(az_to_turn);
+    // Serial.print(" : ");
+    // Serial.println(az_current_angle);
 }
 
 // Function definitions

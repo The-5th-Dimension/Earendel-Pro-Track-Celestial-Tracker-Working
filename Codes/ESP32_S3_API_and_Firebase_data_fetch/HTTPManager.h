@@ -1,9 +1,8 @@
 #ifndef HTTP_MANAGER_H
 #define HTTP_MANAGER_H
 
-// #include <ESP8266WiFi.h>
-// #include <ESP8266HTTPClient.h>
-// #include <WiFiClientSecureBearSSL.h>
+#include <WiFi.h>
+#include <HTTPClient.h>
 #include <ArduinoJson.h>
 
 class HTTPManager {
