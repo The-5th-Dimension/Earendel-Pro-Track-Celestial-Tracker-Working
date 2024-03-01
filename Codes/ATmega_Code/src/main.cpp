@@ -73,16 +73,42 @@ void loop()
 // Function Definitions
 void handleSerial()
 {
-  // The function definition depends on how the ESP32 encodes data.
-
-  // Set `valuesUpdated` to true after any change.
   if (Serial.available())
   {
     const int buffSize = 50;
     char input[buffSize];
     Serial.readStringUntil('\n').toCharArray(input, buffSize);
+
     data inputData = decode(input);
+
+    if (inputData.type == "DATE")
+    {
+      day = (int)inputData.value1;
+      month = (int)inputData.value2;
+      year = (int)inputData.value3;
+    }
+    else if (inputData.type == "TIME")
+    {
+      hour = (int)inputData.value1;
+      minute = (int)inputData.value2;
+      second = inputData.value3;
+    }
+    else if (inputData.type == "GPS")
+    {
+      latitude = inputData.value1;
+      longitude = inputData.value2;
+    }
+    else if (inputData.type == "RADEC")
+    {
+      ra = inputData.value1;
+      dec = inputData.value2;
+    }
+
+    valuesUpdated = true;
   }
+
+  // == TODO ==
+  // Send an acknowledgement back to the ESP32 after a successful reception of data.
 }
 
 void autoUpdateTime()

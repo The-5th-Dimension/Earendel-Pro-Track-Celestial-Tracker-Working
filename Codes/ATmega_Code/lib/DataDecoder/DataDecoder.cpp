@@ -31,9 +31,9 @@ data decode(char *input)
     token = strtok(token, delimPtr); // Start extracting actual data values.
 
     inputData.value1 = atof(token);
-    strtok(NULL, delimPtr);
+    token = strtok(NULL, delimPtr);
     inputData.value2 = atof(token);
-    strtok(NULL, delimPtr);
+    token = strtok(NULL, delimPtr);
     inputData.value3 = atof(token);
 
     return inputData;
