@@ -15,6 +15,7 @@ PROJECT PLAN
 #include <StandardCplusplus.h>
 #include <vector>
 #include "CoordinateConverter.h"
+#include "DataDecoder.h"
 
 #define Serial_INT 2
 
@@ -36,6 +37,7 @@ void autoUpdateTime();
 
 void setup()
 {
+  Serial.begin(115200);
   // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
 
   pinMode(Serial_INT, INPUT_PULLUP);
@@ -74,6 +76,13 @@ void handleSerial()
   // The function definition depends on how the ESP32 encodes data.
 
   // Set `valuesUpdated` to true after any change.
+  if (Serial.available())
+  {
+    const int buffSize = 50;
+    char input[buffSize];
+    Serial.readStringUntil('\n').toCharArray(input, buffSize);
+    data inputData = decode(input);
+  }
 }
 
 void autoUpdateTime()
