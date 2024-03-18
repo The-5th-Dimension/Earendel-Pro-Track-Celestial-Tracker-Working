@@ -70,7 +70,7 @@ void setup()
   // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
 
   pinMode(Serial_INT, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
+  // attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
 
   autoUpdateTime();
 }
