@@ -16,6 +16,7 @@ PROJECT PLAN
 #include <vector>
 #include "CoordinateConverter.h"
 #include "DataDecoder.h"
+#include "stepper.h"
 
 #define Serial_INT 2
 
@@ -37,6 +38,8 @@ void autoUpdateTime();
 
 void setup()
 {
+  pinModeSteppers();
+
   Serial.begin(115200);
   // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
 
