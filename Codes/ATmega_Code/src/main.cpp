@@ -17,8 +17,12 @@ PROJECT PLAN
 #include "CoordinateConverter.h"
 #include "DataDecoder.h"
 #include "stepper.h"
+#include "Accelerometer.h"
 
-#define Serial_INT 2
+// The accelerometer we use is an MPU6050.
+#define ACC_I2C_ADDR 0x69
+
+// #define Serial_INT 2 // Interrupts seem not working.
 
 // Variables to be updated based on the Serial data from the ESP32.
 volatile int year = 2000, month = 1, day = 1, hour = 12, minute = 0;
@@ -31,6 +35,7 @@ bool valuesUpdated = true;
 double altitude = 0, azimuth = 0;
 
 CoordinateConverter converter;
+Accelerometer accelerometer(ACC_I2C_ADDR);
 
 // Function Declarations
 void handleSerial();
@@ -43,14 +48,16 @@ void setup()
   Serial.begin(115200);
   // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
 
-  pinMode(Serial_INT, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
+  // pinMode(Serial_INT, INPUT_PULLUP);
+  // attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
 
   autoUpdateTime();
 }
 
 void loop()
 {
+  handleSerial();
+
   if (valuesUpdated)
   {
     converter.updateLocation(latitude, longitude);
