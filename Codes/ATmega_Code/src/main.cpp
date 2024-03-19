@@ -35,7 +35,7 @@ bool valuesUpdated = true;
 double altitude = 0, azimuth = 0;
 
 CoordinateConverter converter;
-Accelerometer accelerometer(ACC_I2C_ADDR);
+Accelerometer accelerometer;
 
 // Function Declarations
 void handleSerial();
@@ -43,6 +43,8 @@ void autoUpdateTime();
 
 void setup()
 {
+  accelerometer.begin(ACC_I2C_ADDR);
+  
   pinModeSteppers();
 
   Serial.begin(115200);

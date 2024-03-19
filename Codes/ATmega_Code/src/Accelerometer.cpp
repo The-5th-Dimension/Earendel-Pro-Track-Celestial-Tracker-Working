@@ -1,5 +1,5 @@
 #include <Arduino.h>
-// #include <StandardCplusplus.h>
+#include <StandardCplusplus.h>
 #include <vector>
 #include <cmath>
 #include <Wire.h>
@@ -8,13 +8,9 @@
 
 using namespace std;
 
-Accelerometer::Accelerometer(int addr) {
+void Accelerometer::begin(int addr) {
     i2c_address = addr;
 
-    initialize();
-}
-
-void Accelerometer::initialize() {
     Wire.begin();                      // Initialize comunication
     Wire.beginTransmission(i2c_address);       // Start communication with MPU6050
     Wire.write(0x6B);                  // Talk to the register 6B
@@ -22,22 +18,26 @@ void Accelerometer::initialize() {
     Wire.endTransmission(true);        //end the transmission
 }
 
-vector<float> Accelerometer::getAcceleration() {
+void Accelerometer::readAcceleration() {
     Wire.beginTransmission(i2c_address);
     Wire.write(0x3B); // Start with register 0x3B (ACCEL_XOUT_H)
     Wire.endTransmission(false);
     Wire.requestFrom(i2c_address, 6, true); // Read 6 registers total, each axis value is stored in 2 registers
 
-    vector<float> readings;
-
     // //For a range of +-2g, we need to divide the raw values by 16384, according to the datasheet
     accX = (Wire.read() << 8 | Wire.read()) / 16384.0;
     accY = (Wire.read() << 8 | Wire.read()) / 16384.0;
     accZ = (Wire.read() << 8 | Wire.read()) / 16384.0;
+}
 
-    readings.push_back(accX); // X-axis value
-    readings.push_back(accY); // Y-axis value
-    readings.push_back(accZ); // Z-axis value
+struct accComp Accelerometer::getAcceleration() {
+    readAcceleration();
+
+    struct accComp readings;
+    
+    readings.AccX = accX;
+    readings.AccY = accY;
+    readings.AccZ = accZ;
 
     return readings;
 }
@@ -50,10 +50,10 @@ void Accelerometer::calibrateError() {
     float errorX = 0, errorY = 0;
 
     while (c < 200) {
-        vector<float> readings = getAcceleration();
+        struct accComp readings = getAcceleration();
         // Sum all readings
-        errorX += + ((atan((readings[1]) / sqrt(pow((readings[0]), 2) + pow((readings[2]), 2))) * 180 / PI));
-        errorY += + ((atan(-1 * (readings[0]) / sqrt(pow((readings[1]), 2) + pow((readings[2]), 2))) * 180 / PI));
+        errorX += + ((atan((readings.AccY) / sqrt(pow((readings.AccX), 2) + pow((readings.AccZ), 2))) * 180 / PI));
+        errorY += + ((atan(-1 * (readings.AccX) / sqrt(pow((readings.AccY), 2) + pow((readings.AccZ), 2))) * 180 / PI));
         c++;
     }
 
