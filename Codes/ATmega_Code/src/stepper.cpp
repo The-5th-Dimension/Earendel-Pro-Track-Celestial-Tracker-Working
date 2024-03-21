@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "stepper.h"
+#include "Stepper.h"
 
 void pinModeSteppers() {
     pinMode(STEPPER_DOWN_STEP, OUTPUT);

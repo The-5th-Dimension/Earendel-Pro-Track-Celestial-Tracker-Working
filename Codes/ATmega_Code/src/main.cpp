@@ -16,11 +16,14 @@ PROJECT PLAN
 #include <vector>
 #include "CoordinateConverter.h"
 #include "DataDecoder.h"
-#include "stepper.h"
+#include "Stepper.h"
 #include "Accelerometer.h"
 
 // The accelerometer we use is an MPU6050.
 #define ACC_I2C_ADDR 0x69
+
+#define AZIMUTH_ANGULAR_RESOLUTION 1 // degrees
+#define ALTITUDE_ANGULAR_RESOLUTION 1 // degrees
 
 // #define Serial_INT 2 // Interrupts seem not working.
 
@@ -34,6 +37,8 @@ bool valuesUpdated = true;
 // Local coordinate values.
 double altitude = 0, azimuth = 0;
 
+float roll = 0, yawn = 0;
+
 CoordinateConverter converter;
 Accelerometer accelerometer;
 
@@ -44,6 +49,10 @@ void autoUpdateTime();
 void setup()
 {
   accelerometer.begin(ACC_I2C_ADDR);
+
+  // Need the accelerometer to be horizontally flat.
+  // If not practical, comment this out.
+  // accelerometer.calibrateError();
   
   pinModeSteppers();
 
@@ -76,10 +85,21 @@ void loop()
   altitude = altaz[0];
   azimuth = altaz[1];
 
-  // == TODO ==
-  // Now, turn bottom stepper to `azimuth`, and top stepper to `altitude`.
-  // Need to consider about how to accurately map the motor angles with the physical world angles.
-  // Accelerometer and Magnetometer comes into play here.
+  // Beep if altitude is below zero.
+
+  // Turn bottom part to `azimuth`.
+  yawn = 0; // Magnetometer.getYawn();  // This should return absolute angle from the North.
+  bool motorDirectionDown = (azimuth - yawn) >= 0;  // Might neeed to change to <=, depending on the actual setup.
+  while (azimuth - yawn < AZIMUTH_ANGULAR_RESOLUTION) {
+    rotate(STEPPER_DOWN, motorDirectionDown);
+  }
+
+  // Turn top part to `altitude`.
+  roll = accelerometer.getRoll(); // Either roll or pitch depending on how the accelerometer is mounted.
+  bool motorDirectionUp = (altitude - roll) >= 0;  // Might neeed to change to <=, depending on the actual setup.
+  while (altitude - roll < ALTITUDE_ANGULAR_RESOLUTION) {
+    rotate(STEPPER_UP, motorDirectionUp);
+  }
 }
 
 // Function Definitions
