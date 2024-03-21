@@ -3,20 +3,27 @@
 #include "FirebaseManager.h"
 #include "HTTPManager.h"
 #include "LCDManager.h"
+#include <time.h>
 
 LiquidCrystal_I2C lcd(0x27, 20, 4);
 
-const char* ssid = "Yasiru's Galaxy Tab";
-const char* password = "unlimited";
+#define _SSID "Dialog 4G 752"         // Your WiFi SSID
+#define _PASSWORD "b10F79cD"     // Your WiFi Password
+// #define _SSID "Yasiru's Galaxy Tab"          // Your WiFi SSID
+// #define _PASSWORD "unlimited"      // Your WiFi PasswordString serverPath = serverName;
 const char* referenceUrl = "earendeldata-default-rtdb.asia-southeast1.firebasedatabase.app";
 const char* httpUrl = "https://api.visibleplanets.dev/v3?latitude=7.4818&longitude=80.3609&showCoords=true&aboveHorizon=false";
 const char* FirebaseUrl = "https://earendeldata-default-rtdb.asia-southeast1.firebasedatabase.app/";
+
+const char* ntpServer = "pool.ntp.org";
+const long  gmtOffset_sec = 0; // Timezone offset in seconds (e.g. 0 for GMT)
+const int   daylightOffset_sec = 3600; // Daylight offset in seconds (e.g. 3600 for DST)
 
 #define az "Z"
 #define alt "Y"
 
 FirebaseManager firebase(referenceUrl);
-WiFiManager wifiManager(ssid, password, lcd);
+WiFiManager wifiManager(_SSID, _PASSWORD, lcd);
 HTTPManager httpManager;
 // FirebaseManagerNew httpManager;
 
@@ -52,8 +59,9 @@ void setup() {
   lcd.init();
   lcd.backlight();
   Serial.begin(115200);
-
-    WiFi.mode(WIFI_STA);
+  // pinMode(LED_BUILTIN, OUTPUT);
+  // digitalWrite(LED_BUILTIN, LOW);
+  WiFi.mode(WIFI_STA);
   WiFi.disconnect();
   delay(1000);
 
@@ -61,8 +69,8 @@ void setup() {
   Serial.println();
   Serial.println();
   Serial.print("Connecting to: ");
-  Serial.println(ssid);
-  WiFi.begin(ssid, password);
+  Serial.println(_SSID);
+  WiFi.begin(_SSID, _PASSWORD);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
@@ -79,6 +87,9 @@ void setup() {
   Serial.println("/");
   // digitalWrite(LED_BUILTIN, HIGH);
 
+//================================================================//
+//================================================================//
+
 
   Serial.println();
   Serial.println();
@@ -86,11 +97,37 @@ void setup() {
   // initialize();
   now_time = -30;
 
+  // Initialize and synchronize the time
+  configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+
+  // Wait for time to be set
+  while (!time(nullptr)) {
+    delay(1000);
+    Serial.println("Waiting for time to sync...");
+  }
+
 }
 
 void loop() {
+
+  // Get current time
+  time_t now;
+  struct tm timeinfo;
+  char strftime_buf[64];
+
+  time(&now);
+  localtime_r(&now, &timeinfo);
+  
+  // Format time into a string
+  strftime(strftime_buf, sizeof(strftime_buf), "%Y-%m-%d %H:%M:%S", &timeinfo);
+  
+  // Print time to serial
+  Serial.print("Current time: ");
+  Serial.println(strftime_buf);
+
   if (millis()/1000 - now_time >= 10){
     planetNeeded = firebase.getString("Planet");
+    // planetNeeded = "Sun";
 
     Serial.println(planetNeeded);
     
@@ -147,6 +184,7 @@ void initialize() {
 }
 
 void handlePlanetData() {
+  Serial.print("Finding Planet Data");
   httpManager.fetchData(httpUrl, planetNames, raValues, decValues);
 
   int index = findIndex(planetNames, MAX_PLANETS, planetNeeded);

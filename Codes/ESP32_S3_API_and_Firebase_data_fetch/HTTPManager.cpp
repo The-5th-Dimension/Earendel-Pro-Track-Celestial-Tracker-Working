@@ -3,17 +3,18 @@
 HTTPManager::HTTPManager() {}
 
 void HTTPManager::fetchData(const String& apiUrl, String planetNames[], String raValues[], String decValues[]) {
-  WiFiClientSecure client;
-  HTTPClient https;
+  HTTPClient http;
+  String serverPath = apiUrl;
 
-  if (https.begin(client, apiUrl)) {
-    int httpCode = https.GET();
+  if (http.begin(serverPath.c_str())) {
+    int httpCode = http.GET();
     if (httpCode > 0) {
       if (httpCode == HTTP_CODE_OK || httpCode == HTTP_CODE_MOVED_PERMANENTLY) {
-        String payload = https.getString();
+        String payload = http.getString();
         DynamicJsonDocument doc(32);
         deserializeJson(doc, payload);
         JsonArray data = doc["data"];
+        Serial.println(data);
 
         int i = 0;
         for (JsonObject planet : data) {
@@ -32,17 +33,18 @@ void HTTPManager::fetchData(const String& apiUrl, String planetNames[], String r
           bool decNegative = dec["negative"];
 
           planetNames[i] = name;
+          // Serial.println(name);
           raValues[i] = String(raNegative ? "-" : "") + String(raHours) + "h " + String(raMinutes) + "m " + String(raSeconds) + "s";
           decValues[i] = String(decNegative ? "-" : "") + String(decDegrees) + "° " + String(decArcMinutes) + "' " + String(decArcSeconds) + "\"";
           i++;
         }
       }
     } else {
-      Serial.printf("[https] GET... failed, error: %s\n", https.errorToString(httpCode).c_str());
+      Serial.printf("[http] GET... failed, error: %s\n", http.errorToString(httpCode).c_str());
     }
 
-    https.end();
+    http.end();
   } else {
-    Serial.printf("[https] Unable to connect\n");
+    Serial.printf("[http] Unable to connect\n");
   }
 }
