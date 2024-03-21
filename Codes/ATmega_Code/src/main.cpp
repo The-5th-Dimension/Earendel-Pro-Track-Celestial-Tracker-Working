@@ -45,9 +45,13 @@ Accelerometer accelerometer;
 // Function Declarations
 void handleSerial();
 void autoUpdateTime();
+void debugPrint();
 
 void setup()
 {
+  // Serial output for debug data output.
+  Serial.begin(115200);
+
   accelerometer.begin(ACC_I2C_ADDR);
 
   // Need the accelerometer to be horizontally flat.
@@ -100,6 +104,9 @@ void loop()
   while (altitude - roll < ALTITUDE_ANGULAR_RESOLUTION) {
     rotate(STEPPER_UP, motorDirectionUp);
   }
+
+  // DEBUG
+  debugPrint();
 }
 
 // Function Definitions
@@ -178,4 +185,14 @@ ISR(TIMER1_OVF_vect)
 
   // Setting back to 3036, otherwise it starts back from 0.
   TCNT1 = 3036;
+}
+
+void debugPrint() {
+  Serial.print(String(year) + "." + String(month) + "." + String(day) + "\t");
+  Serial.print(String(hour) + ":" + String(minute) + "." + String(second) + "\t");
+  Serial.print("Latitude: " + String(latitude) + ", Longitude: " + String(longitude) + "\t");
+  Serial.print("RA: " + String(ra) + ", DEC: " + String(dec) + "\t");
+  Serial.print("Altitude: " + String(altitude) + ", Azimuth: " + String(azimuth) + "\t");
+  Serial.print("Roll: " + String(roll) + ", Yawn: " + String(yawn) + "\t");
+  Serial.println();
 }
