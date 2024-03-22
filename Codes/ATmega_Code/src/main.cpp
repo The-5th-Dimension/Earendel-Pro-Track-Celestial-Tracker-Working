@@ -94,14 +94,14 @@ void loop()
   // Turn bottom part to `azimuth`.
   yawn = 0; // Magnetometer.getYawn();  // This should return absolute angle from the North.
   bool motorDirectionDown = (azimuth - yawn) >= 0;  // Might neeed to change to <=, depending on the actual setup.
-  if (absolute(azimuth - yawn) < AZIMUTH_ANGULAR_RESOLUTION) {
+  if (absolute(azimuth - yawn) > AZIMUTH_ANGULAR_RESOLUTION) {
     rotate(STEPPER_DOWN, motorDirectionDown);
   }
 
   // Turn top part to `altitude`.
   roll = accelerometer.getRoll(); // Either roll or pitch depending on how the accelerometer is mounted.
   bool motorDirectionUp = (altitude - roll) >= 0;  // Might neeed to change to <=, depending on the actual setup.
-  if (absolute(altitude - roll) < ALTITUDE_ANGULAR_RESOLUTION) {
+  if (absolute(altitude - roll) > ALTITUDE_ANGULAR_RESOLUTION) {
     rotate(STEPPER_UP, motorDirectionUp);
   }
 
@@ -165,17 +165,17 @@ void autoUpdateTime()
 ISR(TIMER1_OVF_vect)
 {
   second += 1;
-  if (second == 60)
+  if (second >= 60)
   {
     second = 0;
     minute += 1;
   }
-  if (minute == 60)
+  if (minute >= 60)
   {
     minute = 0;
     hour += 1;
   }
-  if (hour == 24)
+  if (hour >= 24)
   {
     hour = 0;
     day += 1;
