@@ -29,10 +29,12 @@ PROJECT PLAN
 // #define Serial_INT 2 // Interrupts seem not working.
 
 // Variables to be updated based on the Serial data from the ESP32.
-volatile int year = 2000, month = 1, day = 1, hour = 12, minute = 0;
+
+// SOME RANDOM (EXPECTED ON DEMONSTRATION DAY) VALUES ARE SET FOR BETTER ACCURACY.
+volatile int year = 2024, month = 3, day = 23, hour = 4, minute = 30; // Expected day and time of demonstration.
 volatile double second = 0;
-volatile double latitude = 0, longitude = 0;
-double ra = 0, dec = 0;
+volatile double latitude = 6.9271, longitude = 79.8612;
+double ra = 6.75, dec = -16.7;  // Sirius
 bool valuesUpdated = true;
 double currentAzimuth = 0;
 unsigned int azimuthStep = 0;
@@ -136,9 +138,7 @@ void loop()
   roll = accelerometer.getRoll(); // Either roll or pitch depending on how the accelerometer is mounted.
   bool motorDirectionUp = altitude >= roll;  // Might neeed to change to <=, depending on the actual setup.
   if (absolute(altitude - roll) > ALTITUDE_ANGULAR_RESOLUTION) {
-    // Serial.print("Abs: " + String(absolute(altitude - roll)) + " ");
     rotate(STEPPER_UP, motorDirectionUp);
-    // Serial.print("Rotating... " + String(motorDirectionUp) + "\t");
   }
 
   // // DEBUG
