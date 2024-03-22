@@ -10,9 +10,6 @@ void pinModeSteppers() {
 }
 
 void rotate(int motor, int direction) {
-    // DEBUG Output
-    Serial.print("Turning... " + String(direction) + "\t");
-
     if (motor == STEPPER_DOWN) {
         if (direction == DIR_1) {
             digitalWrite(STEPPER_DOWN_DIR, LOW);
@@ -23,10 +20,10 @@ void rotate(int motor, int direction) {
 
         digitalWrite(STEPPER_DOWN_STEP, HIGH); 
         delayMicroseconds(500);
-        delay(30);
+        // delay(30);
         digitalWrite(STEPPER_DOWN_STEP, LOW); 
         delayMicroseconds(500);
-        delay(30);
+        // delay(30);
     } else if (motor == STEPPER_UP) {
         if (direction == DIR_1) {
             digitalWrite(STEPPER_UP_DIR, LOW);
@@ -37,9 +34,9 @@ void rotate(int motor, int direction) {
 
         digitalWrite(STEPPER_UP_STEP, HIGH); 
         delayMicroseconds(500);
-        delay(30);
+        // delay(30);
         digitalWrite(STEPPER_UP_STEP, LOW); 
         delayMicroseconds(500);
-        delay(30);
+        // delay(30);
     }
 }

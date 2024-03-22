@@ -4,6 +4,6 @@
 #define STEPS_PER_REVOLUTION 3200   // Should update to the correct value.
 
 unsigned long int angleToSteps(double angle);
-double stepsToAngle(unsigned long int steps);
+double stepsToAngle(double steps);
 
 #endif

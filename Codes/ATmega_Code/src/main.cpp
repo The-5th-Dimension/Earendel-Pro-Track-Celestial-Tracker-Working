@@ -23,8 +23,8 @@ PROJECT PLAN
 // The accelerometer we use is an MPU6050.
 #define ACC_I2C_ADDR 0x68
 
-#define AZIMUTH_ANGULAR_RESOLUTION 1 // degrees
-#define ALTITUDE_ANGULAR_RESOLUTION 1 // degrees
+#define AZIMUTH_ANGULAR_RESOLUTION 10 // degrees
+#define ALTITUDE_ANGULAR_RESOLUTION 10 // degrees
 
 // #define Serial_INT 2 // Interrupts seem not working.
 
@@ -35,6 +35,7 @@ volatile double latitude = 0, longitude = 0;
 double ra = 0, dec = 0;
 bool valuesUpdated = true;
 double currentAzimuth = 0;
+unsigned int azimuthStep = 0;
 
 // Local coordinate values.
 double altitude = 0, azimuth = 0;
@@ -53,6 +54,8 @@ double absolute(double); // Custom function to find the absolute value.
 
 void setup()
 {
+  // pinMode(13, OUTPUT);
+
   // Serial output for debug data output.
   Serial.begin(115200);
 
@@ -69,7 +72,7 @@ void setup()
   // pinMode(Serial_INT, INPUT_PULLUP);
   // attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
 
-  autoUpdateTime();
+  autoUpdateTime(); 
 }
 
 void loop()
@@ -90,7 +93,9 @@ void loop()
 
   vector<double> altaz = converter.convert();
   altitude = altaz[0];
-  azimuth = altaz[1];
+  // altitude = 30;
+  // azimuth = altaz[1];
+  azimuth = 75;
 
   // Lowest angle for the telescope is 0 degrees.
   if (altitude < 0) {
@@ -98,16 +103,19 @@ void loop()
   }
 
   // Turn bottom part to `azimuth`.
-  
+
+  // ===== WORKS ONLY WITH A MAGNETOMETER =====
   // yawn = 0; // Magnetometer.getYawn();  // This should return absolute angle from the North.
   // bool motorDirectionDown = (azimuth - yawn) >= 0;  // Might neeed to change to <=, depending on the actual setup.
   // if (absolute(azimuth - yawn) > AZIMUTH_ANGULAR_RESOLUTION) {
   //   rotate(STEPPER_DOWN, motorDirectionDown);
   // }
+  // ==========
 
 
   // ALTERNATE METHOD WITHOUT A MAGNETOMETER
   // THIS METHOD REQUIRES THE INITIAL ALIGNMENT TO NORTH.
+  //========================
   bool motorDirectionDown;
   // Might need to interchange >= and <, depending on the actual setup.
   if (currentAzimuth >= azimuth) {
@@ -119,7 +127,8 @@ void loop()
 
   double remainingAngle = absolute(currentAzimuth - azimuth);
 
-  for (unsigned int i = 0; i < angleToSteps(remainingAngle); i++) {
+
+  if ((azimuthStep < angleToSteps(remainingAngle)) &&  (absolute(currentAzimuth - azimuth) > AZIMUTH_ANGULAR_RESOLUTION)) {
     rotate(STEPPER_DOWN, motorDirectionDown);
     if (currentAzimuth >= azimuth) {
       currentAzimuth -= stepsToAngle(1);
@@ -127,18 +136,41 @@ void loop()
     else if (currentAzimuth < azimuth) {
       currentAzimuth += stepsToAngle(1);
     }
+    azimuthStep++;
+    // Serial.println("CurrentAzimuth: " + String(currentAzimuth));
   }
+  //==============================
+
+  // if (remainingAngle > AZIMUTH_ANGULAR_RESOLUTION) {
+  //   rotate(STEPPER_DOWN, motorDirectionDown);
+  //   if (currentAzimuth >= azimuth) {
+  //     currentAzimuth -= stepsToAngle(1);
+  //   }
+  //   else if (currentAzimuth < azimuth) {
+  //     currentAzimuth += stepsToAngle(1);
+  //   }
+  //   // azimuthStep++;
+  //   Serial.println("CurrentAzimuth: " + String(currentAzimuth));
+  // }
 
   // Turn top part to `altitude`.
   roll = accelerometer.getRoll(); // Either roll or pitch depending on how the accelerometer is mounted.
-  bool motorDirectionUp = (altitude - roll) >= 0;  // Might neeed to change to <=, depending on the actual setup.
+  // if (roll > 30) {
+  //   digitalWrite(13, HIGH);
+  // }
+  // else {
+  //   digitalWrite(13, LOW);
+  // }
+  bool motorDirectionUp = altitude >= roll;  // Might neeed to change to <=, depending on the actual setup.
   if (absolute(altitude - roll) > ALTITUDE_ANGULAR_RESOLUTION) {
+    // Serial.print("Abs: " + String(absolute(altitude - roll)) + " ");
     rotate(STEPPER_UP, motorDirectionUp);
+    // Serial.print("Rotating... " + String(motorDirectionUp) + "\t");
   }
 
-  // DEBUG
-  debugPrint();
-  delay(1000);
+  // // DEBUG
+  // debugPrint();
+  // // delay(1000);
 }
 
 // Function Definitions
