@@ -67,14 +67,12 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this,"Not Received",Toast.LENGTH_SHORT).show()
                     }
                     else{
-                        Toast.makeText(this,"Turn on Location",Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this,"Turned on Location",Toast.LENGTH_SHORT).show()
                         //Add to firebase
                         val locationRef = databaseReference.child("Location")
-                        val locationMap = HashMap<String, Any>()
-                        locationMap["latitude"] = location.latitude
-                        locationMap["longitude"] = location.longitude
-                        //Log.d("TAG", location)
-                        locationRef.setValue(locationMap)
+                        //val locationString = "$location.latitude,$location.longitude"
+                        val locationString = "GPS ${location.latitude},${location.longitude}"
+                        locationRef.setValue(locationString)
                     }
                 }
 
