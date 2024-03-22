@@ -1,0 +1,16 @@
+#ifndef WIFI_MANAGER_H
+#define WIFI_MANAGER_H
+
+#include <LiquidCrystal_I2C.h>
+
+class WiFiManager {
+public:
+  WiFiManager(const char* ssid, const char* password, LiquidCrystal_I2C& lcd);
+  void connect();
+private:
+  const char* ssid;
+  const char* password;
+  LiquidCrystal_I2C& lcd;
+};
+
+#endif

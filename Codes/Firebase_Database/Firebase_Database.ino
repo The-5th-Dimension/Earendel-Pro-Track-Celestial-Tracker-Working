@@ -17,7 +17,6 @@
 // FirebaseDemo_ESP8266 is a sample that demo the different functions
 // of the FirebaseArduino API.
 
-#include <ESP8266WiFi.h>
 #include <FirebaseArduino.h>
 
 // Set these to run example.

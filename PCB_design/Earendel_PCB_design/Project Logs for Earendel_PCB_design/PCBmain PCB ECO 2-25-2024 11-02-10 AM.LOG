@@ -1,0 +1,193 @@
+Change Component Footprint: Designator=P?_Stepper_Alt Old Footprint=61300811121 New Footprint=61300811121
+Change Component Footprint: Designator=P?_Stepper_Alt Old Footprint=61300811121 New Footprint=61300811121
+Change Component Footprint: Designator=P?_Stepper_AZ Old Footprint=61300811121 New Footprint=61300811121
+Change Component Footprint: Designator=P?_Stepper_AZ Old Footprint=61300811121 New Footprint=61300811121
+Added Component: Designator=C?_Stepper_Alt(PNSC-FK-V-D8_V)
+Add component (AddParameter): Name = "Capacitance"; Value = "100µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Size/Dimension"; Value = "Ø6.3x7.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1181.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "03/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Impedance"; Value = "0.34O"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lifetime@Temperature"; Value = "2000Hrs@105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.panasonic.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temp Range"; Value = "-55to+105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temp-Max"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Electrolytic Aluminum Capacitor, Body 6.6 x 6.6 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "FK-V-D8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/DME0000COL48.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ripple Current"; Value = "280mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "FK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Can"; VariantName = "[No Variations]"
+Added Component: Designator=C?_Stepper_AZ(PNSC-FK-V-D8_V)
+Add component (AddParameter): Name = "Capacitance"; Value = "100µF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Size/Dimension"; Value = "Ø6.3x7.7mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet URL"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/ABA0000C1181.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Version"; Value = "03/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Impedance"; Value = "0.34O"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lifetime@Temperature"; Value = "2000Hrs@105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Panasonic"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer URL"; Value = "http://www.panasonic.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "SurfaceMount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temp Range"; Value = "-55to+105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Temp-Max"; Value = "105°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Description"; Value = "2-Pin Electrolytic Aluminum Capacitor, Body 6.6 x 6.6 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Reference"; Value = "FK-V-D8"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package URL"; Value = "http://industrial.panasonic.com/cdbs/www-data/pdf/RDE0000/DME0000COL48.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Rated Voltage"; Value = "25V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ripple Current"; Value = "280mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "FK"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type"; Value = "Can"; VariantName = "[No Variations]"
+Added Component: Designator=J?_Stepper_Alt(FP-B4B-XH-A_LF_SN-MFG)
+Add component (AddParameter): Name = "Color"; Value = "Natural"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Header"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish - Mating"; Value = "TIN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Brass"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Shape"; Value = "Square"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "5.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fastening Type"; Value = "Detent"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Color"; Value = "White"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Polyamide"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Color"; Value = "Natural"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Material"; Value = "Nylon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "1GR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Pitch"; Value = "2.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "12.4mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mated Stacking Heights"; Value = "9.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Polyamide"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (AC)"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (DC)"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-25°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bulk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "XH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (AC)"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wire/Cable Gauge"; Value = "22AWG"; VariantName = "[No Variations]"
+Added Component: Designator=J?_Stepper_AZ(FP-B4B-XH-A_LF_SN-MFG)
+Add component (AddParameter): Name = "Color"; Value = "Natural"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Header"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Finish - Mating"; Value = "TIN"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Material"; Value = "Brass"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Plating"; Value = "Tin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Resistance"; Value = "20mR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Shape"; Value = "Square"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Type"; Value = "Male Pin"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Depth"; Value = "5.75mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Fastening Type"; Value = "Detent"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Flammability Rating"; Value = "UL94 V-0"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gender"; Value = "Male"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Color"; Value = "White"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Housing Material"; Value = "Polyamide"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Color"; Value = "Natural"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Material"; Value = "Nylon"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Insulation Resistance"; Value = "1GR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Pitch"; Value = "2.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "12.4mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mated Stacking Heights"; Value = "9.8mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Material"; Value = "Polyamide"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Current Rating"; Value = "3A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (AC)"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Voltage Rating (DC)"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-25°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Contacts"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Positions"; Value = "4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Rows"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Orientation"; Value = "Straight"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "500"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bulk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pitch"; Value = "2.5mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "XH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "Solder"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (AC)"; Value = "250V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Wire/Cable Gauge"; Value = "22AWG"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+12 Pin=C?_Stepper_Alt-1
+Added Pin To Net: NetName=GND Pin=C?_Stepper_Alt-2
+Added Pin To Net: NetName=+12 Pin=C?_Stepper_AZ-1
+Added Pin To Net: NetName=GND Pin=C?_Stepper_AZ-2
+Added Pin To Net: NetName=GND Pin=P?_Stepper_Alt-1
+Added Pin To Net: NetName=+5 Pin=P?_Stepper_Alt-2
+Added Pin To Net: NetName=GND Pin=P?_Stepper_Alt-7
+Added Pin To Net: NetName=+12 Pin=P?_Stepper_Alt-8
+Added Pin To Net: NetName=GND Pin=P?_Stepper_AZ-1
+Added Pin To Net: NetName=+5 Pin=P?_Stepper_AZ-2
+Added Pin To Net: NetName=GND Pin=P?_Stepper_AZ-7
+Added Pin To Net: NetName=+12 Pin=P?_Stepper_AZ-8
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_2" already exists
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_1 Pin=J?_Stepper_Alt-1
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_1 Pin=P?_Stepper_Alt-3
+Added Net: Name=NetJ?_Stepper_Alt_1
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_2 Pin=J?_Stepper_Alt-2
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_2 Pin=P?_Stepper_Alt-4
+Added Net: Name=NetJ?_Stepper_Alt_2
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_3 Pin=J?_Stepper_Alt-3
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_3 Pin=P?_Stepper_Alt-5
+Added Net: Name=NetJ?_Stepper_Alt_3
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_4 Pin=J?_Stepper_Alt-4
+Added Pin To Net: NetName=NetJ?_Stepper_Alt_4 Pin=P?_Stepper_Alt-6
+Added Net: Name=NetJ?_Stepper_Alt_4
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_1 Pin=J?_Stepper_AZ-1
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_1 Pin=P?_Stepper_AZ-3
+Added Net: Name=NetJ?_Stepper_AZ_1
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_2 Pin=J?_Stepper_AZ-2
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_2 Pin=P?_Stepper_AZ-4
+Added Net: Name=NetJ?_Stepper_AZ_2
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_3 Pin=J?_Stepper_AZ-3
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_3 Pin=P?_Stepper_AZ-5
+Added Net: Name=NetJ?_Stepper_AZ_3
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_4 Pin=J?_Stepper_AZ-4
+Added Pin To Net: NetName=NetJ?_Stepper_AZ_4 Pin=P?_Stepper_AZ-6
+Added Net: Name=NetJ?_Stepper_AZ_4
+Added Pin To Net: NetName=NetP?_Stepper_Alt_5 Pin=P?_Stepper_Alt-5
+Added Pin To Net: NetName=NetP?_Stepper_Alt_5 Pin=P?_Stepper_Alt-6
+Added Net: Name=NetP?_Stepper_Alt_5
+Added Pin To Net: NetName=NetP?_Stepper_AZ_5 Pin=P?_Stepper_AZ-5
+Added Pin To Net: NetName=NetP?_Stepper_AZ_5 Pin=P?_Stepper_AZ-6
+Added Net: Name=NetP?_Stepper_AZ_5
+Add Net: Net with name "NetR?_1" already exists
+Added Member To Class: ClassName=Stepper_Alt Member=Component C?_Stepper_Alt (C?) EEEFK1E101XP
+Added Member To Class: ClassName=Stepper_AZ Member=Component C?_Stepper_AZ (C?) EEEFK1E101XP
+Added Member To Class: ClassName=Asynchronous Member=Component C? 08055F104KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C? C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C? C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Stepper_Alt Member=Component J?_Stepper_Alt (J?) B4B-XH-A(LF)(SN)
+Added Member To Class: ClassName=Stepper_AZ Member=Component J?_Stepper_AZ (J?) B4B-XH-A(LF)(SN)
+Added Member To Class: ClassName=Asynchronous Member=Component J? PEC02DABN
+Added Member To Class: ClassName=Power Member=Component J? 213083-0005
+Added Member To Class: ClassName=Stepper_Alt Member=Component P?_Stepper_Alt (P?) 61300811121
+Added Member To Class: ClassName=Stepper_AZ Member=Component P?_Stepper_AZ (P?) 61300811121
+Added Member To Class: ClassName=Stepper_Alt Member=Component R?_Stepper_Alt (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Stepper_Alt Member=Component R?_Stepper_Alt (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Stepper_AZ Member=Component R?_Stepper_AZ (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Stepper_AZ Member=Component R?_Stepper_AZ (R?) RC0805FR-071KL
+Added Member To Class: ClassName=Power Member=Component R? RC0805FR-071KL

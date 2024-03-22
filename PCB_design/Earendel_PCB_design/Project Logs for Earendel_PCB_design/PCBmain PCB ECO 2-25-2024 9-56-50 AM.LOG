@@ -1,0 +1,20 @@
+Added Pin To Net: NetName=3V3 Pin=J?-1
+Added Pin To Net: NetName=GND Pin=J?-3
+Added Pin To Net: NetName=RX_channel Pin=J?-4
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_1" already exists
+Add Net: Net with name "NetC?_2" already exists
+Add Net: Net with name "NetR?_1" already exists
+Added Pin To Net: NetName=RX_ESP Pin=J?-2
+Added Pin To Net: NetName=RX_ESP Pin=U?-3
+Added Pin To Net: NetName=RX_ESP Pin=U?-34
+Added Net: Name=RX_ESP
+Added Member To Class: ClassName=Asynchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C? 08055F104KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C? C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component C? C0805C220K3GACTU
+Added Member To Class: ClassName=Synchronous Member=Component C? 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component J? PEC02DABN
+Added Member To Class: ClassName=Power Member=Component J? 213083-0005
+Added Member To Class: ClassName=Power Member=Component R? RC0805FR-071KL

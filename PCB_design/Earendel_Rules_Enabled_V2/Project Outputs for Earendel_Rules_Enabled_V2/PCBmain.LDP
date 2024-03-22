@@ -1,0 +1,4 @@
+Layer Pairs Export File for PCB: C:\Users\yasir\Documents\GitHub\Earendel-Pro-Track-Celestial-Tracker-Working\PCB_design\Earendel_Rules_Enabled_V2\PCBmain.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=pcbmain-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=pcbmain-slotholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Rect_Holes|DrillFile=pcbmain-rectholes.txt|DrillLayers=gtl,gbl
