@@ -10,6 +10,9 @@ void pinModeSteppers() {
 }
 
 void rotate(int motor, int direction) {
+    // DEBUG Output
+    Serial.println("Turning...");
+
     if (motor == STEPPER_DOWN) {
         if (direction == DIR_1) {
             digitalWrite(STEPPER_DOWN_DIR, LOW);

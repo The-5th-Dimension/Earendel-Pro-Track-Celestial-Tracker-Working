@@ -15,7 +15,7 @@ void Accelerometer::begin(int addr) {
     Wire.beginTransmission(i2c_address);       // Start communication with MPU6050
     Wire.write(0x6B);                  // Talk to the register 6B
     Wire.write(0x00);                  // Make reset - place a 0 into the 6B register
-    Wire.endTransmission(true);        //end the transmission
+    Wire.endTransmission(true);        // End the transmission
 }
 
 void Accelerometer::readAcceleration() {
@@ -63,10 +63,12 @@ void Accelerometer::calibrateError() {
 }
 
 float Accelerometer::getRoll() {
+    readAcceleration();
     return (atan(accY / sqrt(pow(accX, 2) + pow(accZ, 2))) * 180 / PI) - accErrorX;
     
 }
 
 float Accelerometer::getPitch() {
+    readAcceleration();
     return (atan(-1 * accX / sqrt(pow(accY, 2) + pow(accZ, 2))) * 180 / PI) - accErrorY;
 }

@@ -20,7 +20,7 @@ PROJECT PLAN
 #include "Accelerometer.h"
 
 // The accelerometer we use is an MPU6050.
-#define ACC_I2C_ADDR 0x69
+#define ACC_I2C_ADDR 0x68
 
 #define AZIMUTH_ANGULAR_RESOLUTION 1 // degrees
 #define ALTITUDE_ANGULAR_RESOLUTION 1 // degrees
@@ -46,6 +46,7 @@ Accelerometer accelerometer;
 void handleSerial();
 void autoUpdateTime();
 void debugPrint();
+double absolute(double); // Custom function to find the absolute value.
 
 void setup()
 {
@@ -60,7 +61,6 @@ void setup()
   
   pinModeSteppers();
 
-  Serial.begin(115200);
   // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
 
   // pinMode(Serial_INT, INPUT_PULLUP);
@@ -94,19 +94,20 @@ void loop()
   // Turn bottom part to `azimuth`.
   yawn = 0; // Magnetometer.getYawn();  // This should return absolute angle from the North.
   bool motorDirectionDown = (azimuth - yawn) >= 0;  // Might neeed to change to <=, depending on the actual setup.
-  while (azimuth - yawn < AZIMUTH_ANGULAR_RESOLUTION) {
+  if (absolute(azimuth - yawn) < AZIMUTH_ANGULAR_RESOLUTION) {
     rotate(STEPPER_DOWN, motorDirectionDown);
   }
 
   // Turn top part to `altitude`.
   roll = accelerometer.getRoll(); // Either roll or pitch depending on how the accelerometer is mounted.
   bool motorDirectionUp = (altitude - roll) >= 0;  // Might neeed to change to <=, depending on the actual setup.
-  while (altitude - roll < ALTITUDE_ANGULAR_RESOLUTION) {
+  if (absolute(altitude - roll) < ALTITUDE_ANGULAR_RESOLUTION) {
     rotate(STEPPER_UP, motorDirectionUp);
   }
 
   // DEBUG
   debugPrint();
+  delay(1000);
 }
 
 // Function Definitions
@@ -195,4 +196,13 @@ void debugPrint() {
   Serial.print("Altitude: " + String(altitude) + ", Azimuth: " + String(azimuth) + "\t");
   Serial.print("Roll: " + String(roll) + ", Yawn: " + String(yawn) + "\t");
   Serial.println();
+}
+
+double absolute(double value) {
+  if (value >=0 ) {
+    return value;
+  }
+  else {
+    return -1 * value;
+  }
 }
