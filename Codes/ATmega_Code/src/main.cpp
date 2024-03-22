@@ -18,6 +18,7 @@ PROJECT PLAN
 #include "DataDecoder.h"
 #include "Stepper.h"
 #include "Accelerometer.h"
+#include "PseudoMagnetometer.h"
 
 // The accelerometer we use is an MPU6050.
 #define ACC_I2C_ADDR 0x68
@@ -33,11 +34,13 @@ volatile double second = 0;
 volatile double latitude = 0, longitude = 0;
 double ra = 0, dec = 0;
 bool valuesUpdated = true;
+double currentAzimuth = 0;
 
 // Local coordinate values.
 double altitude = 0, azimuth = 0;
 
-float roll = 0, yawn = 0;
+float roll = 0;
+// float yawn = 0;
 
 CoordinateConverter converter;
 Accelerometer accelerometer;
@@ -89,13 +92,41 @@ void loop()
   altitude = altaz[0];
   azimuth = altaz[1];
 
-  // Beep if altitude is below zero.
+  // Lowest angle for the telescope is 0 degrees.
+  if (altitude < 0) {
+    altitude = 0;
+  }
 
   // Turn bottom part to `azimuth`.
-  yawn = 0; // Magnetometer.getYawn();  // This should return absolute angle from the North.
-  bool motorDirectionDown = (azimuth - yawn) >= 0;  // Might neeed to change to <=, depending on the actual setup.
-  if (absolute(azimuth - yawn) > AZIMUTH_ANGULAR_RESOLUTION) {
+  
+  // yawn = 0; // Magnetometer.getYawn();  // This should return absolute angle from the North.
+  // bool motorDirectionDown = (azimuth - yawn) >= 0;  // Might neeed to change to <=, depending on the actual setup.
+  // if (absolute(azimuth - yawn) > AZIMUTH_ANGULAR_RESOLUTION) {
+  //   rotate(STEPPER_DOWN, motorDirectionDown);
+  // }
+
+
+  // ALTERNATE METHOD WITHOUT A MAGNETOMETER
+  // THIS METHOD REQUIRES THE INITIAL ALIGNMENT TO NORTH.
+  bool motorDirectionDown;
+  // Might need to interchange >= and <, depending on the actual setup.
+  if (currentAzimuth >= azimuth) {
+    motorDirectionDown = DIR_1;
+  }
+  else if (currentAzimuth < azimuth) {
+    motorDirectionDown = DIR_2;
+  }
+
+  double remainingAngle = absolute(currentAzimuth - azimuth);
+
+  for (unsigned int i = 0; i < angleToSteps(remainingAngle); i++) {
     rotate(STEPPER_DOWN, motorDirectionDown);
+    if (currentAzimuth >= azimuth) {
+      currentAzimuth -= stepsToAngle(1);
+    }
+    else if (currentAzimuth < azimuth) {
+      currentAzimuth += stepsToAngle(1);
+    }
   }
 
   // Turn top part to `altitude`.
@@ -194,7 +225,8 @@ void debugPrint() {
   Serial.print("Latitude: " + String(latitude) + ", Longitude: " + String(longitude) + "\t");
   Serial.print("RA: " + String(ra) + ", DEC: " + String(dec) + "\t");
   Serial.print("Altitude: " + String(altitude) + ", Azimuth: " + String(azimuth) + "\t");
-  Serial.print("Roll: " + String(roll) + ", Yawn: " + String(yawn) + "\t");
+  // Serial.print("Roll: " + String(roll) + ", Yawn: " + String(yawn) + "\t");
+  Serial.print("Roll: " + String(roll) + ", CurrentAzimuth: " + String(currentAzimuth) + "\t");
   Serial.println();
 }
 
