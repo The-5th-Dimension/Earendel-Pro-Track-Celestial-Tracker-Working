@@ -23,8 +23,8 @@ PROJECT PLAN
 // The accelerometer we use is an MPU6050.
 #define ACC_I2C_ADDR 0x68
 
-#define AZIMUTH_ANGULAR_RESOLUTION 10 // degrees
-#define ALTITUDE_ANGULAR_RESOLUTION 10 // degrees
+#define AZIMUTH_ANGULAR_RESOLUTION 5 // degrees
+#define ALTITUDE_ANGULAR_RESOLUTION 5 // degrees
 
 // #define Serial_INT 2 // Interrupts seem not working.
 
@@ -54,8 +54,6 @@ double absolute(double); // Custom function to find the absolute value.
 
 void setup()
 {
-  // pinMode(13, OUTPUT);
-
   // Serial output for debug data output.
   Serial.begin(115200);
 
@@ -68,9 +66,6 @@ void setup()
   pinModeSteppers();
 
   // Maybe need to add some initial delay to get the initial data from the ESP32 in the setup.
-
-  // pinMode(Serial_INT, INPUT_PULLUP);
-  // attachInterrupt(digitalPinToInterrupt(Serial_INT), handleSerial, RISING);
 
   autoUpdateTime(); 
 }
@@ -93,9 +88,7 @@ void loop()
 
   vector<double> altaz = converter.convert();
   altitude = altaz[0];
-  // altitude = 30;
-  // azimuth = altaz[1];
-  azimuth = 75;
+  azimuth = altaz[1];
 
   // Lowest angle for the telescope is 0 degrees.
   if (altitude < 0) {
@@ -137,30 +130,10 @@ void loop()
       currentAzimuth += stepsToAngle(1);
     }
     azimuthStep++;
-    // Serial.println("CurrentAzimuth: " + String(currentAzimuth));
   }
-  //==============================
-
-  // if (remainingAngle > AZIMUTH_ANGULAR_RESOLUTION) {
-  //   rotate(STEPPER_DOWN, motorDirectionDown);
-  //   if (currentAzimuth >= azimuth) {
-  //     currentAzimuth -= stepsToAngle(1);
-  //   }
-  //   else if (currentAzimuth < azimuth) {
-  //     currentAzimuth += stepsToAngle(1);
-  //   }
-  //   // azimuthStep++;
-  //   Serial.println("CurrentAzimuth: " + String(currentAzimuth));
-  // }
 
   // Turn top part to `altitude`.
   roll = accelerometer.getRoll(); // Either roll or pitch depending on how the accelerometer is mounted.
-  // if (roll > 30) {
-  //   digitalWrite(13, HIGH);
-  // }
-  // else {
-  //   digitalWrite(13, LOW);
-  // }
   bool motorDirectionUp = altitude >= roll;  // Might neeed to change to <=, depending on the actual setup.
   if (absolute(altitude - roll) > ALTITUDE_ANGULAR_RESOLUTION) {
     // Serial.print("Abs: " + String(absolute(altitude - roll)) + " ");
@@ -170,7 +143,6 @@ void loop()
 
   // // DEBUG
   // debugPrint();
-  // // delay(1000);
 }
 
 // Function Definitions

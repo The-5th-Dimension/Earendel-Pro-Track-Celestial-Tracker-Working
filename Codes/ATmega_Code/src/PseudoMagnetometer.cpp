@@ -7,4 +7,3 @@ unsigned long int angleToSteps(double angle) {
 double stepsToAngle(double steps) {
     return steps / STEPS_PER_REVOLUTION * 360.0;
 }
-
