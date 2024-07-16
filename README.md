@@ -6,7 +6,7 @@
 <h2>Overview</h2>
 <h3>Introduction</h3>
 <p>
-    "Earendel Pro-Track" is a project that aims to design a telescope mount capable of automatically locating and keeping track of stellar objects. The desired stellar object can be selected through the user interface, and once that information is transfered to the telescope mount in the form of celestial coordinates, it turns to that stellar object, and starts observing.
+    "Earendel Pro-Track" is a project that aims to design a telescope mount capable of automatically locating and keeping track of stellar objects. The desired stellar object can be selected through the user interface, and once that information is transferred to the telescope mount in the form of celestial coordinates, it turns to that stellar object, and starts observing.
 </p>
 
 <h3>Features</h3>
@@ -19,13 +19,15 @@
     <li>Carefully designed for smooth and accurate celestial tracking.</li>
 </ul>
 
+To better understand the project and its problem-solution scenario, deliverables and outcomes, refer to <a href="Project Details (Documents and Media)/Project Overview Video/Earendel_Pro_Track _The_5th_Dimension.mp4">this</a> video.
+
 <h2>Research and Development</h2>
 
-<h3>Coordinate Systems and Convertion</h3>
+<h3>Coordinate Systems and Conversion</h3>
 
 | **Altitude - Azimuth** | **Right Ascension - Declination** |
 |:--:|:--:|
-| <img src="Project%20Details%20(Documents%20and%20Media)/Images/alt_az.png" style = "width: 80%">|![Altitude Azimuth](Project%20Details%20(Documents%20and%20Media)/Images/ra_dec.gif)|
+| ![ALT-AZ](Project%20Details%20(Documents%20and%20Media)/Images/Coordinate%20Systems/alt_az.png) | <img src="Project%20Details%20(Documents%20and%20Media)/Images/Coordinate%20Systems/ra_dec.png" style="width: 94.5%">|
 
 These are two main coordinates systems used in astronomy.
 Coordinates given in the latter are relatively constant and can be obtained from databases. They then need to be converted to the former, taking into consideration the user's location and the date and time.
@@ -37,8 +39,35 @@ The location and date and time are acquired from the sensors and the internet, a
 <a href="https://github.com/linukaratnayake/RA-DEC-to-ALT-AZ-Tilted-Axes-Coordinate-Convertion-for-Stellar-Objects">ALT-AZ Coordinates for Stellar Objects when Axes are Tilted or Rotated</a></b>
 
 <h2>Software Development</h2>
+
+In the project, it was aimed to provide the flexibility to the user such that it is possible to use a mobile device or a computer to control the telescope mount. This includes developing a mobile application (currently Android, plan to extend to iOS), and a web interface, through which the user can select the desired stellar object.
+
+Furthermore, software development includes designing of databases to store data of stars and planets, as well as handling user details.
+
 <h3>Mobile App</h3>
 
+| ![Home Screen](Project%20Details%20(Documents%20and%20Media)/Images/Mobile%20App/1.jpg) | ![Home Screen - Location Permission](Project%20Details%20(Documents%20and%20Media)/Images/Mobile%20App/2.jpg)|
+|:--:|:--:|
+| ![Stars](Project%20Details%20(Documents%20and%20Media)/Images/Mobile%20App/3.jpg) | ![Planets](Project%20Details%20(Documents%20and%20Media)/Images/Mobile%20App/4.jpg)|
+
+<h3>Web Application</h3>
+
+| ![Home Screen](Project%20Details%20(Documents%20and%20Media)/Images/Web%20App/1.PNG) | ![Home Screen - Location Permission](Project%20Details%20(Documents%20and%20Media)/Images/Web%20App/2.PNG)|
+|:--:|:--:|
+| ![Stars](Project%20Details%20(Documents%20and%20Media)/Images/Web%20App/3.PNG) | ![Planets](Project%20Details%20(Documents%20and%20Media)/Images/Web%20App/4.PNG)|
+
 <h2>PCB Design</h2>
+
+![PCB](Project%20Details%20(Documents%20and%20Media)/Images/PCB/PCB.jpg)
+
+A custom 2-layer PCB is designed using **Altium Designer**.
+
+**Features of the PCB**
+<ul>
+<li>Division of synchronous and asynchronous processing parts between two microcontrollers, for smooth movements. (Initially, this approach made firmware design easy, but in the future designs, it may reduce to a single microcontroller.) </li>
+<li>2 power-up methods: DC barrel jack up to 12V, USB type C port</li>
+<li>All-in-one design with the stepper motor drivers, and the accelerometer on-board.</li>
+<li>Ports for magnetometer, and GPS module integration.</li>
+</ul>
 
 <h2>Mechanical Design</h2>
