@@ -40,7 +40,16 @@ The location and date and time are acquired from the sensors and the internet, a
 
 <b>In this project, the conversion from Right Ascension and Declination coordinates to Altitude and Azimuth coordinates was improved by accounting for the tilt of the telescope mount. For further details, please refer to the following personal repository.
 
-<a href="https://github.com/linukaratnayake/RA-DEC-to-ALT-AZ-Tilted-Axes-Coordinate-Convertion-for-Stellar-Objects">ALT-AZ Coordinates for Stellar Objects when Axes are Tilted or Rotated</a></b>
+<a href="https://github.com/linukaratnayake/RA-DEC-to-ALT-AZ-Tilted-Axes-Coordinate-Convertion-for-Stellar-Objects">linukaratnayake/RA-DEC-to-ALT-AZ-Tilted-Axes-Coordinate-Convertion-for-Stellar-Objects</a></b>
+
+**Repository Content**
+
+<ul>
+<li>Algorithm to convert Right Ascension and Declination coordinates to Altitude and Azimuth coordinates.</li>
+<li>Mathematical derivation of an algorithm to compensate for the tilt in the coordinate axes.</li>
+<li>Python implementation of the algorithms for testing and as a proof of concept.</li>
+<li>C/C++ implementation of the algorithms to be used in the actual device.</li>
+</ul>
 
 <h2>Software Development</h2>
 
@@ -60,18 +69,33 @@ Furthermore, software development includes designing of databases to store data 
 |:--:|:--:|
 | ![Stars](Project%20Details%20(Documents%20and%20Media)/Images/Web%20App/3.PNG) | ![Planets](Project%20Details%20(Documents%20and%20Media)/Images/Web%20App/4.PNG)|
 
+
+For codes and further details of the user application and the inclusion of databases, refer <a href="Codes/User Application/">here</a>.
+
 <h2>PCB Design</h2>
 
-![PCB](Project%20Details%20(Documents%20and%20Media)/Images/PCB/PCB.jpg)
+<img src="Project Details (Documents and Media)/Images/PCB/PCB.png" style="width: 60%; margin-left: auto; margin-right: auto; display: block;">
 
 A custom 2-layer PCB is designed using **Altium Designer**.
 
 **Features of the PCB**
 <ul>
-<li>Division of synchronous and asynchronous processing parts between two microcontrollers, for smooth movements. (Initially, this approach made firmware design easy, but in the future designs, it may reduce to a single microcontroller.) </li>
-<li>2 power-up methods: DC barrel jack up to 12V, USB type C port</li>
-<li>All-in-one design with the stepper motor drivers, and the accelerometer on-board.</li>
-<li>Ports for magnetometer, and GPS module integration.</li>
+<li>Division of synchronous and asynchronous processing parts between two microcontrollers, to reduce latency, and seamless and smoother movements.</li>
+<li>2 power-up methods: DC barrel jack up to 12V, and USB type C port.</li>
+<li>Compact design with on-board mounted stepper motor drivers, and control switches.</li>
+<li>External connection ports for integrating accelerometer, magnetometer, and GPS module.</li>
 </ul>
 
+For PCB design files, refer <a href="PCB Design">here</a>.
+
+<!-- <b>In the second version of the PCB, several identified issues were resolved, together with the addition of some more features. For further details, please refer to the following personal repository.
+
+<a href="https://github.com/YasiruDEX?tab=repositories">[repo_name]</a></b> -->
+
 <h2>Mechanical Design</h2>
+
+<img src="Project Details (Documents and Media)/Images/Enclosure/Enclosure.png" style="width: 60%; margin-left: auto; margin-right: auto; display: block;">
+
+Metal structure is designed to support the weight of the telescope, motors, and other components, with a 3D printed enclosure to enhance the visual appeal. **SOLIDWORKS** and **Blender** are used extensively for designing.
+
+For structure and enclosure design files, and details, refer <a href="Physical Design">here</a>.
