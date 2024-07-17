@@ -1,7 +1,0 @@
-Removed Pin From Net: NetName=+12 Pin=C14-1
-Removed Pin From Net: NetName=+12 Pin=C15-2
-Removed Pin From Net: NetName=+12 Pin=U4-3
-Change Component Comment : Designator=U4 Old Comment=AMS1117-5.0 New Comment=AMS1117-3.3
-Added Pin To Net: NetName=+5 Pin=C14-1
-Added Pin To Net: NetName=+5 Pin=C15-2
-Added Pin To Net: NetName=+5 Pin=U4-3

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "211681728005",
+    "firebase_url": "https://earendeldb-bb3da-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "earendeldb-bb3da",
+    "storage_bucket": "earendeldb-bb3da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:211681728005:android:db5aacab0d9b940dd52e6c",
+        "android_client_info": {
+          "package_name": "com.earendel.earendel"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5WrqzL1o_0sVD2k7YCj10KbnNWdExNHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

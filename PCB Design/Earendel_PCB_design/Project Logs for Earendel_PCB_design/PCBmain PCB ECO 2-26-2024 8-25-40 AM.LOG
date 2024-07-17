@@ -1,0 +1,22 @@
+Change Component Footprint: Designator=LS1 Old Footprint=FP-MCKPX-G1203A-K4056-MFG New Footprint=FP-SD1614TT-B3M-MFG
+Change Component Comment : Designator=LS1 Old Comment=MCKPX-G1203A-K4056 New Comment=SD1614TT-B3M
+Change Managed Component Library Link : Designator=LS1 Old VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 New VaultGUID=B7D15EC3-160A-466F-A46C-7801FE6295A7 Old ItemGUID=477B0A9E-80D5-4AAE-854A-78DD2C9BC17D New ItemGUID=AE880EAC-FACB-41EE-A85E-B3B912E61C28 Old RevisionGUID=32EA62B3-11FE-44EF-AFCA-747D009A9BA4 New RevisionGUID=E7192336-1D8C-474C-8D01-2D83772C6DA1
+Change component parameters: Designator = "LS1" ("LS1"); Footprint = "FP-MCKPX-G1203A-K4056-MFG"; UniqueID = "\YGYAFJOB\GXLBNTIQ" ("\YGYAFJOB\GXLBNTIQ")
+Change component parameters (AddParameter): Name = "Diameter"; Value = "16mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Frequency"; Value = "2.048kHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "11mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height - Seated (Max)"; Value = "0.551inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Supply Current"; Value = "100mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Through Hole"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Supply Current"; Value = "100mA"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Operating Supply Voltage"; Value = "15V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "240"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Bulk"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Sensing Method"; Value = "Magnetic"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "SD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "PC Pins"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Voltage Rating"; Value = "12V"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Washable"; Value = "No"; VariantName = "[No Variations]"

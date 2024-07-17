@@ -1,0 +1,18 @@
+Removed Pin From Net: NetName=GND Pin=C2-2
+Removed Pin From Net: NetName=GND Pin=C2-2
+Change Component Footprint: Designator=J? Old Footprint=694106301002 New Footprint=694106301002
+Change Component Footprint: Designator=J? Old Footprint=FP-2130830005-MFG New Footprint=FP-2130830005-MFG
+Add Component: Footprint Not Found XTAL_ECS-160-S-1X
+Added Pin To Net: NetName=GND Pin=J?-3
+Added Pin To Net: NetName=GND Pin=J?-A1
+Added Pin To Net: NetName=5V Pin=J?-B9
+Add Pin To Net: Unknown Pin: Pin Y1-2
+Change Net Name : Old Net Name=5V New Net Name=NetC1_1
+Change Net Name : Old Net Name=GND New Net Name=NetC1_2
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C2-2
+Added Net: Name=GND
+Add Net: Net with name "NetC2_1" already exists
+Added Member To Class: ClassName=synchronous Member=Component C2 02013A220JAT2A
+Added Member To Class: ClassName=Power Member=Component J? 213083-0005
+Add Class Member: Failed to add class member : Component Y1 ECS-160-S-1X

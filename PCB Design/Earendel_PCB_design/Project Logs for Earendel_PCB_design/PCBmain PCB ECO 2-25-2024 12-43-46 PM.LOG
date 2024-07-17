@@ -1,0 +1,24 @@
+Removed Pin From Net: NetName=NetP2A_4 Pin=SW3A-6
+Removed Pin From Net: NetName=NetP2A_3 Pin=SW3A-7
+Removed Pin From Net: NetName=NetP2A_2 Pin=SW3A-8
+Removed Pin From Net: NetName=NetP2B_4 Pin=SW3B-6
+Removed Pin From Net: NetName=NetP2B_3 Pin=SW3B-7
+Removed Pin From Net: NetName=NetP2B_2 Pin=SW3B-8
+Removed Member From Class: ClassName=Power Member=C3
+Removed Member From Class: ClassName=Synchronous Member=SW2
+Added Pin To Net: NetName=NetP2A_4 Pin=SW3A-5
+Added Pin To Net: NetName=NetP2A_3 Pin=SW3A-6
+Added Pin To Net: NetName=NetP2A_2 Pin=SW3A-7
+Added Pin To Net: NetName=NetP2B_4 Pin=SW3B-5
+Added Pin To Net: NetName=NetP2B_3 Pin=SW3B-6
+Added Pin To Net: NetName=NetP2B_2 Pin=SW3B-7
+Added Pin To Net: NetName=NetP2A_1 Pin=P2A-1
+Added Pin To Net: NetName=NetP2A_1 Pin=SW3A-8
+Added Net: Name=NetP2A_1
+Added Pin To Net: NetName=NetP2B_1 Pin=P2B-1
+Added Pin To Net: NetName=NetP2B_1 Pin=SW3B-8
+Added Net: Name=NetP2B_1
+Added Member To Class: ClassName=Power Member=Component C10 1206YD106KAT2A
+Added Member To Class: ClassName=Stepper_Alt Member=Component P2A (P2) 61300811121
+Added Member To Class: ClassName=Power Member=Component R6 RC0805FR-071KL
+Added Member To Class: ClassName=Synchronous Member=Component SW1 EVQ-PLMA15
