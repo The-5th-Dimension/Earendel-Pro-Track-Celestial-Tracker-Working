@@ -1,0 +1,12 @@
+Add Component: Footprint Not Found CAPC1608X90N
+Add Component: Footprint Not Found LEDC1608X55N
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Add Pin To Net: Unknown Pin: Pin LED1-1
+Add Pin To Net: Unknown Pin: Pin LED1-2
+Added Pin To Net: NetName=SCL Pin=R6-2
+Added Pin To Net: NetName=SDA Pin=R9-2
+Added Member To Class: ClassName=Synchronous Member=Component C1 CC0603JRNPO9BN220
+Add Class Member: Failed to add class member : Component C5 CL10A106KP8NNNC
+Add Class Member: Failed to add class member : Component LED1 Red
+Added Member To Class: ClassName=Synchronous Member=Component R10 AF0603FR-071K5L

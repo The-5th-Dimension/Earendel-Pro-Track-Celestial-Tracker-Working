@@ -1,0 +1,27 @@
+Added Component: Designator=ANT1(FP-RN-SMA-S-MFG)
+Add component (AddParameter): Name = "Case/Package"; Value = "SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Frequency"; Value = "2.4GHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Gain"; Value = "0.56dB"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1.118inch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Input Impedance"; Value = "50R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Lead Free"; Value = "Lead Free"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Connector"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Bands"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Frequency"; Value = "2.4 GHz"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Bulk"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Series"; Value = "-"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Termination"; Value = "SMA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "VSWR"; Value = "2.5"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found RESC1608X55N
+Add Component: Footprint Not Found RESC1608X55N
+Add Pin To Net: Unknown Pin: Pin R8-1
+Add Pin To Net: Unknown Pin: Pin R8-2
+Add Pin To Net: Unknown Pin: Pin R9-1
+Add Pin To Net: Unknown Pin: Pin R9-2
+Added Member To Class: ClassName=Sensors Member=Component ANT1 RN-SMA-S
+Add Class Member: Failed to add class member : Component R8 0603WAF5101T5E
+Add Class Member: Failed to add class member : Component R9 0603WAF5101T5E

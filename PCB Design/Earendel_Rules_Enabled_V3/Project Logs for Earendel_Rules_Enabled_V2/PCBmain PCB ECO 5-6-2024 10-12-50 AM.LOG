@@ -1,0 +1,140 @@
+Removed Member From Class: ClassName=Power Member=C6
+Removed Member From Class: ClassName=Asynchronous Member=C9
+Removed Member From Class: ClassName=Asynchronous Member=C10
+Removed Member From Class: ClassName=Power Member=C10
+Removed Member From Class: ClassName=Power Member=C26
+Removed Member From Class: ClassName=Asynchronous Member=R4
+Removed Member From Class: ClassName=Power Member=R4
+Removed Member From Class: ClassName=Power Member=R13
+Removed Member From Class: ClassName=Power Member=R15
+Add Component: Footprint Not Found HRO_TYPE-C-31-M-12
+Added Component: Designator=LED2(VISH-TLMX1100_V)
+Add component (AddParameter): Name = "Capacitance"; Value = "12 pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.vishay.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.vishay.com/docs/83173/tlmb1100.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 2.7, 03/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "2-Pin Surface Mount Device, Body 1.6 x 0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "TLMX1100"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "100000000000 Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type (Capacitors)"; Value = "C0G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.8 mm"; VariantName = "[No Variations]"
+Added Component: Designator=LED3(VISH-TLMX1100_V)
+Add component (AddParameter): Name = "Capacitance"; Value = "12 pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Imperial)"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case Code (Metric)"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case/Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.vishay.com/"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.vishay.com/docs/83173/tlmb1100.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 2.7, 03/2016"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Length"; Value = "1.6 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-55degC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package Quantity"; Value = "4000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "2-Pin Surface Mount Device, Body 1.6 x 0.8 mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "TLMX1100"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pins"; Value = "2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Radiation Hardening"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "REACH SVHC"; Value = "No SVHC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Resistance"; Value = "100000000000 Ohm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHSCompliant"; Value = "True"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Type (Capacitors)"; Value = "C0G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Voltage Rating (DC)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Width"; Value = "0.8 mm"; VariantName = "[No Variations]"
+Add Component: Footprint Not Found RESC1608X55N
+Add Component: Footprint Not Found RESC1608X55N
+Added Component: Designator=U2(SOIC127P600X180-16N)
+Add component (AddParameter): Name = "Availability"; Value = "Not in stock"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/Ch340G/WCH/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Component Type"; Value = "Standard"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Design Item ID"; Value = "CH340G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "WCH"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "Ch340G"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pin Count"; Value = "16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/Ch340G/WCH/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Source"; Value = "CH340G.SchLib"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Pin To Net: Unknown Pin: Pin J4-A1_B12
+Add Pin To Net: Unknown Pin: Pin J4-A4_B9
+Add Pin To Net: Unknown Pin: Pin J4-A5
+Add Pin To Net: Unknown Pin: Pin J4-A6
+Add Pin To Net: Unknown Pin: Pin J4-A7
+Add Pin To Net: Unknown Pin: Pin J4-B1_A12
+Add Pin To Net: Unknown Pin: Pin J4-B4_A9
+Add Pin To Net: Unknown Pin: Pin J4-B5
+Add Pin To Net: Unknown Pin: Pin J4-B6
+Add Pin To Net: Unknown Pin: Pin J4-B7
+Add Pin To Net: Unknown Pin: Pin J4-S1
+Add Pin To Net: Unknown Pin: Pin J4-S2
+Add Pin To Net: Unknown Pin: Pin J4-S3
+Add Pin To Net: Unknown Pin: Pin J4-S4
+Added Pin To Net: NetName=+5V Pin=LED3-1
+Add Pin To Net: Unknown Pin: Pin R8-1
+Add Pin To Net: Unknown Pin: Pin R8-2
+Add Pin To Net: Unknown Pin: Pin R9-1
+Add Pin To Net: Unknown Pin: Pin R9-2
+Added Pin To Net: NetName=GND Pin=U2-1
+Added Pin To Net: NetName=NetR5_1 Pin=U2-2
+Added Pin To Net: NetName=NetR6_1 Pin=U2-3
+Added Pin To Net: NetName=D+ Pin=U2-5
+Added Pin To Net: NetName=D- Pin=U2-6
+Added Pin To Net: NetName=NetC11_2 Pin=U2-7
+Added Pin To Net: NetName=NetC17_2 Pin=U2-8
+Added Pin To Net: NetName=NetLED2_2 Pin=LED2-2
+Added Pin To Net: NetName=NetLED2_2 Pin=R6-2
+Added Net: Name=NetLED2_2
+Added Pin To Net: NetName=NetLED3_2 Pin=LED3-2
+Added Pin To Net: NetName=NetLED3_2 Pin=R5-2
+Added Net: Name=NetLED3_2
+Added Member To Class: ClassName=Synchronous Member=Component C3 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Synchronous Member=Component C5 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Synchronous Member=Component C7 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Power Member=Component C12 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Power Member=Component C13 1206YD106KAT2A
+Added Member To Class: ClassName=Power Member=Component C14 08055F104KAT2A
+Added Member To Class: ClassName=Power Member=Component C15 1206YD106KAT2A
+Added Member To Class: ClassName=Power Member=Component C17 CC0603JRNPO9BN220
+Added Member To Class: ClassName=Power Member=Component C19 08055F104KAT2A
+Added Member To Class: ClassName=Power Member=Component C20 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C22 1206YD106KAT2A
+Added Member To Class: ClassName=Asynchronous Member=Component C23 08055F104KAT2A
+Added Member To Class: ClassName=Synchronous Member=Component J2 B2B-XH-A(LF)(SN)
+Add Class Member: Failed to add class member : Component J4 TYPE-C-31-M-12
+Added Member To Class: ClassName=Power Member=Component LED2 TLMS1100-GS08
+Added Member To Class: ClassName=Power Member=Component LED3 TLMS1100-GS08
+Added Member To Class: ClassName=Synchronous Member=Component R2 RC0603JR-0710KL
+Added Member To Class: ClassName=Power Member=Component R5 AF0603FR-071K5L
+Added Member To Class: ClassName=Power Member=Component R6 AF0603FR-071K5L
+Added Member To Class: ClassName=Power Member=Component R7 AF0603FR-071K5L
+Add Class Member: Failed to add class member : Component R8 0603WAF5101T5E
+Add Class Member: Failed to add class member : Component R9 0603WAF5101T5E
+Added Member To Class: ClassName=Asynchronous Member=Component R10 RC0805FR-0710KL
+Added Member To Class: ClassName=Asynchronous Member=Component SW4 EVQ-PLMA15
+Added Member To Class: ClassName=Power Member=Component U2 CH340G

@@ -1,0 +1,20 @@
+Removed Member From Class: ClassName=Sensors Member=ANT1
+Added Component: Designator=J10(IPEX_20279-001E-03)
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/20279-001E-03/I-PEX/view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "I-PEX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "20279-001E-03"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/20279-001E-03/I-PEX/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Add Component: Footprint Not Found RESC1608X55N
+Add Component: Footprint Not Found RESC1608X55N
+Added Pin To Net: NetName=RF_IN Pin=J10-1
+Added Pin To Net: NetName=GND Pin=J10-2
+Added Pin To Net: NetName=GND Pin=J10-3
+Add Pin To Net: Unknown Pin: Pin R8-1
+Add Pin To Net: Unknown Pin: Pin R8-2
+Add Pin To Net: Unknown Pin: Pin R9-1
+Add Pin To Net: Unknown Pin: Pin R9-2
+Added Member To Class: ClassName=Sensors Member=Component J10 20279-001E-03
+Add Class Member: Failed to add class member : Component R8 0603WAF5101T5E
+Add Class Member: Failed to add class member : Component R9 0603WAF5101T5E

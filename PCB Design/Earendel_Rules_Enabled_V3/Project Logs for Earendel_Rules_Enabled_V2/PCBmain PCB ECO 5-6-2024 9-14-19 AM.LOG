@@ -1,0 +1,88 @@
+Removed Pin From Net: NetName=+5V Pin=C?-2
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Remove Pin from Net: Failed to remove Pin
+Change Component Designator: OldDesignator=C? NewDesignator=C1
+Change Component Designator: OldDesignator=C? NewDesignator=C2
+Change Component Designator: OldDesignator=C? NewDesignator=C3
+Change Component Designator: OldDesignator=C? NewDesignator=C4
+Change Component Designator: OldDesignator=C? NewDesignator=C20
+Change Component Designator: OldDesignator=C? NewDesignator=C21
+Change Component Designator: OldDesignator=C? NewDesignator=C22
+Change Component Designator: OldDesignator=C? NewDesignator=C23
+Change Component Designator: OldDesignator=R? NewDesignator=R1
+Change Component Designator: OldDesignator=R? NewDesignator=R6
+Change Component Designator: OldDesignator=R? NewDesignator=R9
+Change Component Designator: OldDesignator=R? NewDesignator=R10
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=Y? NewDesignator=Y1
+Add Component: Footprint Not Found CAPC1608X90N
+Add Component: Footprint Not Found LEDC1608X55N
+Add Pin To Net: Unknown Pin: Pin C5-1
+Add Pin To Net: Unknown Pin: Pin C5-2
+Added Pin To Net: NetName=GND Pin=C23-2
+Add Pin To Net: Unknown Pin: Pin LED1-2
+Added Pin To Net: NetName=0P Pin=U1-2
+Added Pin To Net: NetName=1P Pin=U1-3
+Added Pin To Net: NetName=+5V Pin=U1-10
+Added Pin To Net: NetName=GND Pin=U1-11
+Added Pin To Net: NetName=53P Pin=U1-19
+Added Pin To Net: NetName=52P Pin=U1-20
+Added Pin To Net: NetName=MISO Pin=U1-21
+Added Pin To Net: NetName=50P Pin=U1-22
+Added Pin To Net: NetName=Reset Pin=U1-30
+Added Pin To Net: NetName=+5V Pin=U1-31
+Added Pin To Net: NetName=GND Pin=U1-32
+Added Pin To Net: NetName=NetC?_2 Pin=U1-33
+Added Pin To Net: NetName=SCL Pin=U1-43
+Added Pin To Net: NetName=SDA Pin=U1-44
+Added Pin To Net: NetName=+5V Pin=U1-61
+Added Pin To Net: NetName=GND Pin=U1-62
+Added Pin To Net: NetName=+5V Pin=U1-80
+Added Pin To Net: NetName=GND Pin=U1-81
+Added Pin To Net: NetName=GND Pin=U1-99
+Added Pin To Net: NetName=+5V Pin=U1-100
+Change Net Name : Old Net Name=NetC?_2 New Net Name=NetC3_2
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=R1-2
+Added Pin To Net: NetName=NetC1_2 Pin=U1-34
+Added Pin To Net: NetName=NetC1_2 Pin=Y1-1
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_1 Pin=C2-1
+Added Pin To Net: NetName=NetC2_1 Pin=U1-98
+Added Net: Name=NetC2_1
+Added Pin To Net: NetName=NetLED1_1 Pin=R10-2
+Added Net: Name=NetLED1_1
+Added Pin To Net: NetName=NetU1_4 Pin=U1-4
+Added Pin To Net: NetName=NetU1_4 Pin=U2-26
+Added Net: Name=NetU1_4
+Added Member To Class: ClassName=Synchronous Member=Component C2 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Synchronous Member=Component C3 CC0603JRNPO9BN220
+Added Member To Class: ClassName=Synchronous Member=Component C4 CC0603KRX7R9BB104
+Add Class Member: Failed to add class member : Component C5 CL10A106KP8NNNC
+Added Member To Class: ClassName=Synchronous Member=Component C20 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Synchronous Member=Component C21 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Synchronous Member=Component C22 CC0603KRX7R9BB104
+Added Member To Class: ClassName=Synchronous Member=Component C23 CC0603KRX7R9BB104
+Add Class Member: Failed to add class member : Component LED1 Red
+Added Member To Class: ClassName=Synchronous Member=Component R1 AF0603FR-071K5L
+Added Member To Class: ClassName=Synchronous Member=Component R6 RC0603JR-0710KL
+Added Member To Class: ClassName=Synchronous Member=Component R9 RC0603JR-0710KL
