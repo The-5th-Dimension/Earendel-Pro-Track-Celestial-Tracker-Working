@@ -20,7 +20,7 @@
 </ul>
 
 
-https://github.com/user-attachments/assets/2dd600e7-b687-4b56-8a60-264a678e3187
+https://github.com/user-attachments/assets/d0daafc0-86b6-4ca8-b112-ab7fa79acf01
 
 
 To better understand the project and its problem-solution scenario, deliverables and outcomes, refer to <a href="Project Details (Documents and Media)/Project Overview Video/Earendel_Pro_Track _The_5th_Dimension.mp4">this</a> video.
@@ -74,7 +74,7 @@ For codes and further details of the user application and the inclusion of datab
 
 <h2>PCB Design</h2>
 
-<img src="Project Details (Documents and Media)/Images/PCB/PCB.png" style="width: 60%; margin-left: auto; margin-right: auto; display: block;">
+<img src="Project Details (Documents and Media)/Images/PCB/PCB.png" style="width: 80%; margin-left: auto; margin-right: auto; display: block;">
 
 A custom 2-layer PCB is designed using **Altium Designer**.
 
