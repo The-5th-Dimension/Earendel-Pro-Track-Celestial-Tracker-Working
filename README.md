@@ -40,7 +40,7 @@ The location and date and time are acquired from the sensors and the internet, a
 
 <b>In this project, the conversion from Right Ascension and Declination coordinates to Altitude and Azimuth coordinates was improved by accounting for the tilt of the telescope mount. For further details, please refer to the following personal repository.
 
-<a href="https://github.com/linukaratnayake/RADEC-to-ALTAZ-Tilted-Axes-Coordinate-Convertion">linukaratnayake/RADEC-to-ALTAZ-Tilted-Axes-Coordinate-Convertion</a></b>
+<a href="https://github.com/linukaratnayake/RADEC-to-ALTAZ-Tilted-Axes-Coordinate-Conversion">linukaratnayake/RADEC-to-ALTAZ-Tilted-Axes-Coordinate-Conversion</a></b>
 
 **Repository Content**
 
